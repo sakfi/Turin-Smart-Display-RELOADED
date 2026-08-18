@@ -1,0 +1,236 @@
+---
+author: "@acmelab68"
+
+display:
+  DISPLAY_SIZE: 5"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 255
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 800
+    HEIGHT: 480
+
+static_text:
+  # --- HEADERS ---
+  CPU_HEADER:
+    TEXT: "AMD Ryzen 9 - 5950X"
+    X: 105
+    Y: 25
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 60 
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background.png
+  
+  GPU_HEADER:
+    TEXT: "Nvidia - RTX 4080"
+    X: 154
+    Y: 260
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 60
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background.png
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        Y: 145
+        X: 110
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 146
+        Y: 160
+        RADIUS: 80
+        WIDTH: 10
+        MIN_VALUE: 00
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        ALIGN: center
+        BACKGROUND_IMAGE: background.png 
+
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 360
+        Y: 145
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 400
+        Y: 160
+        RADIUS: 80
+        WIDTH: 10
+        MIN_VALUE: 20
+        MAX_VALUE: 95
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        ALIGN: center
+        BACKGROUND_IMAGE: background.png 
+
+    FREQUENCY:
+      INTERVAL: 2
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 605
+        Y: 145
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 652
+        Y: 160
+        RADIUS: 80
+        WIDTH: 10
+        MIN_VALUE: 0.0
+        MAX_VALUE: 5.1
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        ALIGN: center
+        BACKGROUND_IMAGE: background.png 
+
+  GPU:
+    INTERVAL: 2
+    PERCENTAGE:
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 110
+        Y: 390
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 146
+        Y: 396
+        RADIUS: 80
+        WIDTH: 10
+        MIN_VALUE: 00
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        ALIGN: center
+        BACKGROUND_IMAGE: background.png 
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 360
+        Y: 390
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 400
+        Y: 396
+        RADIUS: 80
+        WIDTH: 10
+        MIN_VALUE: 20
+        MAX_VALUE: 95
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        ALIGN: center
+        BACKGROUND_IMAGE: background.png 
+    MEMORY:
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 600
+        Y: 390
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        ALIGN: center
+        ANCHOR: mm
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 652
+        Y: 396
+        RADIUS: 80
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        ALIGN: left
+        ANCHOR: mm
+        BACKGROUND_IMAGE: background.png 

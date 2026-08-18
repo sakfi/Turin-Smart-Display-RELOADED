@@ -1,0 +1,259 @@
+---
+#This theme is using MOREPERFECTDOSVGA.ttf font. 
+#You can download it here: https://laemeur.sdf.org/fonts/
+#Place MorePerfectDOSVGA.ttf file in 'turing-smart-screen-python-3.5.0\resres\fonts' folder.
+
+author: "cactuz9"
+
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+  TEXT_CPU:
+   TEXT: CPU
+   X: 3
+   Y: 3
+   FONT: MOREPERFECTDOSVGA.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 255, 254, 84
+   BACKGROUND_IMAGE: background.png
+  TEXT_GPU:
+   TEXT: GPU
+   X: 3
+   Y: 118
+   FONT: MOREPERFECTDOSVGA.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 255, 254, 84
+   BACKGROUND_IMAGE: background.png
+  TEXT_RAM:
+   TEXT: RAM
+   X: 3
+   Y: 224
+   FONT: MOREPERFECTDOSVGA.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 255, 254, 84
+   BACKGROUND_IMAGE: background.png
+  TEXT_RAM/:
+   TEXT: /
+   X: 175
+   Y: 226
+   FONT: MOREPERFECTDOSVGA.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 133, 246, 255
+   BACKGROUND_IMAGE: background.png
+  TEXT_DOWN:
+   TEXT: DOWNLOAD
+   X: 3
+   Y: 284
+   FONT: MOREPERFECTDOSVGA.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 255, 254, 84
+   BACKGROUND_IMAGE: background.png
+  TEXT_UP:
+   TEXT: UPLOAD
+   X: 3
+   Y: 385
+   FONT: MOREPERFECTDOSVGA.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 255, 254, 84
+   BACKGROUND_IMAGE: background.png
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      LINE_GRAPH:
+        SHOW: True
+        X: 3
+        Y: 31
+        WIDTH: 314
+        HEIGHT: 75
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 60
+        AUTOSCALE: false
+        LINE_COLOR: 133, 246, 255
+        AXIS: True
+        AXIS_COLOR: 133, 246, 255
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 110
+        Y: 3
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 133, 246, 255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 238
+        Y: 3
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 133, 246, 255
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 2
+    FREQUENCY:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 111
+        Y: 118
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 133, 246, 255
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    PERCENTAGE:
+      LINE_GRAPH:
+        SHOW: true
+        X: 3
+        Y: 139
+        WIDTH: 314
+        HEIGHT: 75
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 60
+        AUTOSCALE: False
+        LINE_COLOR: 133, 246, 255
+        AXIS: True
+        AXIS_COLOR: 133, 246, 255
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      GRAPH:
+        SHOW: false
+        X: 115
+        Y: 215
+        WIDTH: 178
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 133, 246, 255
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 0, 0, 0
+    TEMPERATURE:
+      TEXT:
+        SHOW: TRUE
+        SHOW_UNIT: True
+        X: 238
+        Y: 118
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 133, 246, 255
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 10
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 3
+        Y: 255
+        WIDTH: 314
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 133, 246, 255
+        BAR_OUTLINE: true
+        BACKGROUND_COLOR: 0, 0, 0
+      TOTAL:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 195
+        Y: 224
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 133, 246, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png 
+      USED:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 99
+        Y: 224
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 133, 246, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png  
+  NET:
+    INTERVAL: 1   
+    ETH:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 3
+          Y: 419
+          FONT: MOREPERFECTDOSVGA.ttf
+          FONT_SIZE: 25
+          FONT_COLOR: 133, 246, 255
+          BACKGROUND_IMAGE: background.png
+        LINE_GRAPH:
+          SHOW: True
+          X: 150
+          Y: 380
+          WIDTH: 167
+          HEIGHT: 84
+          MIN_VALUE: -1
+          MAX_VALUE: 100000000000
+          HISTORY_SIZE: 60
+          AUTOSCALE: True
+          LINE_COLOR: 133, 246, 255
+          AXIS: True
+          AXIS_COLOR: 255, 254, 84
+          BACKGROUND_IMAGE: background.png
+      DOWNLOADED:
+        TEXT:
+          SHOW: True
+          X: 17
+          Y: 352
+          FONT: MOREPERFECTDOSVGA.ttf
+          FONT_SIZE: 25
+          FONT_COLOR: 133, 246, 255
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        TEXT:
+          SHOW: TRUE
+          X: 3
+          Y: 318
+          FONT: MOREPERFECTDOSVGA.ttf
+          FONT_SIZE: 25
+          FONT_COLOR: 133, 246, 255
+          BACKGROUND_IMAGE: background.png
+        LINE_GRAPH:
+          SHOW: True
+          X: 150
+          Y: 284
+          WIDTH: 167
+          HEIGHT: 84
+          MIN_VALUE: -1
+          MAX_VALUE: 100000000000
+          HISTORY_SIZE: 60
+          AUTOSCALE: True
+          LINE_COLOR: 133, 246, 255
+          AXIS: True
+          AXIS_COLOR: 255, 254, 84
+          BACKGROUND_IMAGE: background.png
+      UPLOADED:
+        TEXT:
+          SHOW: True
+          X: 17
+          Y: 453
+          FONT: MOREPERFECTDOSVGA.ttf
+          FONT_SIZE: 25
+          FONT_COLOR: 133, 246, 255
+          BACKGROUND_IMAGE: background.png

@@ -1,0 +1,204 @@
+---
+author: "@EnzoZarx"
+
+# Change backgroundfr.png to backgrounden.png if you want English translation.
+define: &background 'backgroundfr.png'
+
+display:
+  # Made for 3.5", not tested on 5".
+  DISPLAY_SIZE: 3.5"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 156, 20, 19
+
+static_images:
+  BACKGROUND:
+    PATH: *background
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+    
+static_text:
+  CPU_MODEL:
+    # Set your CPU brand.
+    TEXT: INTEL
+    X: 217
+    Y: 8
+    WIDTH: 66
+    HEIGHT: 12
+    FONT: bahnschrift-light/BAHNSCHRIFT.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: *background
+    ALIGN: center
+  GPU_MODEL:
+    # Set your GPU brand.
+    TEXT: NVIDIA
+    X: 214
+    Y: 102
+    WIDTH: 66
+    HEIGHT: 12
+    FONT: bahnschrift-light/BAHNSCHRIFT.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: *background
+    ALIGN: center
+  RAM_MODEL:
+    # Set your RAM brand.
+    TEXT: CORSAIR
+    X: 17
+    Y: 8
+    WIDTH: 74
+    HEIGHT: 12
+    FONT: bahnschrift-light/BAHNSCHRIFT.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: *background
+    ALIGN: center
+  DISK_TYPE:
+    # Set your DISK type.
+    TEXT: SSD
+    X: 19
+    Y: 124
+    WIDTH: 74
+    HEIGHT: 30
+    FONT: opti-calculator/OPTICalculator.ttf
+    FONT_SIZE: 36
+    FONT_COLOR: 161, 252, 139
+    BACKGROUND_IMAGE: *background
+    ALIGN: center
+    
+STATS:
+  CUSTOM:
+    INTERVAL: 1
+    CustomMonthAbbr:
+      TEXT:
+        SHOW: True
+        X: 14
+        Y: 219
+        WIDTH: 74
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 247, 234, 116
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomDay:
+      TEXT:
+        SHOW: True
+        X: 116
+        Y: 219
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 247, 234, 116
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomYear:
+      TEXT:
+        SHOW: True
+        X: 192
+        Y: 219
+        WIDTH: 92
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 247, 234, 116
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomHour:
+      TEXT:
+        SHOW: True
+        X: 343
+        Y: 219
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 247, 234, 116
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomMinute:
+      TEXT:
+        SHOW: True
+        X: 423
+        Y: 219
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 247, 234, 116
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomCpuUsage:    
+      TEXT:
+        SHOW: TRUE
+        X: 423
+        Y: 30
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 244, 105, 62
+        BACKGROUND_IMAGE: *background
+    CustomCpuTemperature: 
+      TEXT:
+        SHOW: TRUE
+        X: 343
+        Y: 30
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 244, 105, 62
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomRamUsage: 
+      TEXT:
+        SHOW: TRUE
+        X: 116
+        Y: 29
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 244, 105, 62
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomGpuUsage: 
+      TEXT:
+        SHOW: TRUE
+        X: 423
+        Y: 124
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 161, 252, 139
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomGpuTemperature: 
+      TEXT:
+        SHOW: TRUE
+        X: 343
+        Y: 124
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 161, 252, 139
+        BACKGROUND_IMAGE: *background
+        ALIGN: center
+    CustomDiskUsage: 
+      TEXT:
+        SHOW: TRUE
+        X: 116
+        Y: 124
+        WIDTH: 44
+        HEIGHT: 30
+        FONT: opti-calculator/OPTICalculator.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 161, 252, 139
+        BACKGROUND_IMAGE: *background
+        ALIGN: center

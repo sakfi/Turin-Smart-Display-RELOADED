@@ -1,0 +1,118 @@
+---
+author: "@mathoudebine"
+
+display:
+  DISPLAY_SIZE: 5"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 71, 127, 255
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 800
+    HEIGHT: 480
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      GRAPH:
+        SHOW: True
+        X: 55
+        Y: 224
+        WIDTH: 220
+        HEIGHT: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 210, 129, 245
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 105, 101, 98
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 295
+        Y: 197
+        FONT: Impact/Impact.ttf
+        FONT_SIZE: 21
+        FONT_COLOR: 82, 82, 82
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 55
+        Y: 283
+        WIDTH: 220
+        HEIGHT: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 210, 129, 245
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 105, 101, 98
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      GRAPH:
+        SHOW: True
+        X: 55
+        Y: 164
+        WIDTH: 220
+        HEIGHT: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 210, 129, 245
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 105, 101, 98
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 295
+        Y: 138
+        FONT: Impact/Impact.ttf
+        FONT_SIZE: 21
+        FONT_COLOR: 82, 82, 82
+        BACKGROUND_IMAGE: background.png
+  DISK:
+    INTERVAL: 10
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 55
+        Y: 343
+        WIDTH: 220
+        HEIGHT: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 210, 129, 245
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 105, 101, 98
+  DATE:
+    # For time display, it is recommended not to change the interval: keep to 1
+    INTERVAL: 1
+    DAY: # Format (Y/M/D ordering, month/day translations...) will match your computer locale
+      TEXT:
+        FORMAT: full # short (2/20/23) / medium (Feb 20, 2023) / long (February 20, 2023) / full (Monday, February 20, 2023)
+        SHOW: True
+        X: 55
+        Y: 405
+        FONT: Impact/Impact.ttf
+        FONT_SIZE: 19
+        FONT_COLOR: 82, 82, 82
+        BACKGROUND_IMAGE: background.png
+    HOUR: # Format (12/24h, timezone translations) will match your computer locale
+      TEXT:
+        FORMAT: medium # short (6:48 PM) / medium (6:48:53 PM) / long (6:48:53 PM UTC) / full (6:48:53 PM Coordinated Universal Time)
+        SHOW: True
+        X: 55
+        Y: 430
+        FONT: Impact/Impact.ttf
+        FONT_SIZE: 19
+        FONT_COLOR: 82, 82, 82
+        BACKGROUND_IMAGE: background.png
+

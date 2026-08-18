@@ -1,0 +1,263 @@
+---
+# Basic theme setup for a 3.5 inch landscape display with 4 quadrants and a central RAM display
+# Font: MOREPERFECTDOSVGA.ttf needs to be in the fonts folder
+author: "cactuz9"
+landscapemode: "Myke"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+static_text:
+  TEXT_CPU:
+    TEXT: "CPU"
+    X: 0
+    Y: 1
+    FONT: MOREPERFECTDOSVGA.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 204, 204, 204
+    BACKGROUND_IMAGE: background.png
+
+  TEXT_GPU:
+    TEXT: "GPU"
+    X: 250
+    Y: 1
+    FONT: MOREPERFECTDOSVGA.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 204, 204, 204
+    BACKGROUND_IMAGE: background.png
+
+  TEXT_DOWN:
+    TEXT: "DOWNLOAD"
+    X: 0
+    Y: 170
+    FONT: MOREPERFECTDOSVGA.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 204, 204, 204
+    BACKGROUND_IMAGE: background.png
+
+  TEXT_UP:
+    TEXT: "UPLOAD"
+    X: 0
+    Y: 240
+    FONT: MOREPERFECTDOSVGA.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 204, 204, 204
+    BACKGROUND_IMAGE: background.png
+
+  TEXT_RAM:
+    TEXT: "RAM"
+    X: 0
+    Y: 142
+    FONT: MOREPERFECTDOSVGA.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 204, 204, 204
+    BACKGROUND_IMAGE: background.png
+  TEXT_RAM/:
+    TEXT: "|"
+    X: 125
+    Y: 142
+    FONT: MOREPERFECTDOSVGA.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 204, 204, 204
+    BACKGROUND_IMAGE: background.png    
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      LINE_GRAPH:
+        SHOW: True
+        X: 10
+        Y: 30
+        WIDTH: 220
+        HEIGHT: 100
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 60
+        AUTOSCALE: False
+        LINE_COLOR: 204, 204, 204
+        AXIS: True
+        AXIS_COLOR: 204, 204, 204
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 60
+        Y: 1
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 204, 204, 204
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 170
+        Y: 0
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 204, 204, 204
+        BACKGROUND_IMAGE: background.png    
+  GPU:
+    INTERVAL: 2
+    MEMORY_USED:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 310
+        Y: 0
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 204, 204, 204
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    PERCENTAGE:
+      LINE_GRAPH:
+        SHOW: true
+        X: 250
+        Y: 30
+        WIDTH: 220
+        HEIGHT: 100
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 60
+        AUTOSCALE: False
+        LINE_COLOR: 204, 204, 204
+        AXIS: True
+        AXIS_COLOR: 204, 204, 204
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      MEMORY:
+        GRAPH:
+          SHOW: false
+          X: 304 
+          Y: 31
+          WIDTH: 178
+          HEIGHT: 13
+          MIN_VALUE: 0
+          MAX_VALUE: 100
+          BAR_COLOR: 204, 204, 204
+          BAR_OUTLINE: False
+          BACKGROUND_COLOR: 0, 0, 0
+    TEMPERATURE:
+      TEXT:
+        SHOW: TRUE
+        SHOW_UNIT: True
+        X: 410
+        Y: 0
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 204, 204, 204
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 10
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 210
+        Y: 142
+        WIDTH: 264
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 204, 204, 204
+        BAR_OUTLINE: true
+        BACKGROUND_COLOR: 0, 0, 0
+      TOTAL:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 145
+        Y: 142
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 204, 204, 204
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png 
+      USED:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 60
+        Y: 142
+        FONT: MOREPERFECTDOSVGA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 204, 204, 204
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png    
+  NET:
+    INTERVAL: 1
+    ETH:
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 40
+          Y: 205
+          FONT: MOREPERFECTDOSVGA.ttf
+          FONT_SIZE: 22
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+        LINE_GRAPH:
+          SHOW: True
+          X: 240
+          Y: 170
+          WIDTH: 240
+          HEIGHT: 65
+          MIN_VALUE: -1
+          MAX_VALUE: 1000000000
+          HISTORY_SIZE: 60
+          AUTOSCALE: True
+          LINE_COLOR: 255, 255, 255
+          AXIS: True
+          AXIS_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+      UPLOADED:
+        TEXT:
+          SHOW: True
+          X: 110
+          Y: 170
+          FONT: MOREPERFECTDOSVGA.ttf
+          FONT_SIZE: 22
+          FONT_COLOR: 204, 204, 204
+          BACKGROUND_IMAGE: background.png
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 40
+          Y: 275
+          FONT: MOREPERFECTDOSVGA.ttf
+          FONT_SIZE: 22
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+        LINE_GRAPH:
+          SHOW: True
+          X: 240
+          Y: 240
+          WIDTH: 240
+          HEIGHT: 65
+          MIN_VALUE: -1
+          MAX_VALUE: 1000000000
+          HISTORY_SIZE: 60
+          AUTOSCALE: True
+          LINE_COLOR: 255, 255, 255
+          AXIS: True
+          AXIS_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png 
+      DOWNLOADED:
+        TEXT:
+          SHOW: True
+          X: 110
+          Y: 240
+          FONT: MOREPERFECTDOSVGA.ttf
+          FONT_SIZE: 22
+          FONT_COLOR: 204, 204, 204
+          BACKGROUND_IMAGE: background.png

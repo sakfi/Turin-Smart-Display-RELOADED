@@ -1,0 +1,269 @@
+---
+author: "@AlexTheLugi"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 255, 255, 255
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+static_text:
+  CPU_LABEL:
+    TEXT: CPU
+    X: 130
+    Y: 168
+    FONT: Persona3/Exo2-BoldItalic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+
+  GPU_LABEL:
+    TEXT: GPU
+    X: 340
+    Y: 168
+    FONT: Persona3/Exo2-BoldItalic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+
+  RAM_LABEL:
+    TEXT: RAM
+    X: 130
+    Y: 265
+    FONT: Persona3/Exo2-BoldItalic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+
+  VRAM_LABEL:
+    TEXT: VRAM
+    X: 340
+    Y: 265
+    FONT: Persona3/Exo2-BoldItalic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+
+  CPU_TEMP_LABEL:
+    TEXT: CPU TEMP
+    X: 125
+    Y: 215
+    FONT: Persona3/Exo2-BoldItalic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+
+  GPU_TEMP_LABEL:
+    TEXT: GPU TEMP
+    X: 335
+    Y: 215
+    FONT: Persona3/Exo2-BoldItalic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      LINE_GRAPH:
+        SHOW: True
+        X: 40
+        Y: 155
+        WIDTH: 80
+        HEIGHT: 45
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 255, 180, 50
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 170
+        Y: 168
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+    TEMPERATURE:
+      INTERVAL: 2
+      LINE_GRAPH:
+        SHOW: True
+        X: 40
+        Y: 207
+        WIDTH: 80
+        HEIGHT: 45
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: True
+        LINE_COLOR: 220, 70, 40
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 255, 135, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 147
+        Y: 234
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  GPU:
+    INTERVAL: 2
+    PERCENTAGE:
+      LINE_GRAPH:
+        SHOW: True
+        X: 249
+        Y: 155
+        WIDTH: 80
+        HEIGHT: 45
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 100, 255, 100
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 380
+        Y: 168
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+    TEMPERATURE:
+      INTERVAL: 2
+      LINE_GRAPH:
+        SHOW: True
+        X: 249
+        Y: 207
+        WIDTH: 80
+        HEIGHT: 45
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: True
+        LINE_COLOR: 100, 160, 220
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 255, 135, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 357
+        Y: 234
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+    MEMORY_PERCENT:
+      INTERVAL: 2
+      LINE_GRAPH:
+        SHOW: True
+        X: 249
+        Y: 259
+        WIDTH: 80
+        HEIGHT: 45
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 180, 130, 255
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 355
+        Y: 283
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      LINE_GRAPH:
+        SHOW: True
+        X: 40
+        Y: 259
+        WIDTH: 80
+        HEIGHT: 45
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 255, 100, 180
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        BACKGROUND_IMAGE: background.png
+
+      USED:
+        SHOW: False
+        SHOW_UNIT: True
+        X: 156
+        Y: 270
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        BACKGROUND_IMAGE: background.png
+
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 140
+        Y: 283
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+  DATE:
+    INTERVAL: 2
+    DAY:
+      TEXT:
+        FORMAT: medium
+        SHOW: True
+        X: 35
+        Y: 17
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    HOUR:
+      TEXT:
+        FORMAT: short
+        SHOW: True
+        X: 35
+        Y: 35
+        FONT: Persona3/Exo2-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+

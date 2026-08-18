@@ -1,0 +1,290 @@
+---
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 16, 223, 239
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+static_text:
+  CPU_MODEL:
+    TEXT: Ryzen 5700G
+    X: 50
+    Y: 18
+    FONT: generale-mono/GeneraleMonoC.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 189, 207, 231
+    BACKGROUND_IMAGE: background.png
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 68
+        Y: 87
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 78
+        Y: 150
+        WIDTH: 38
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 0, 255
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 120
+        Y: 148
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 155
+        Y: 78
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 350
+        Y: 78
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      GRAPH:
+        SHOW: True
+        X: 290
+        Y: 152
+        WIDTH: 150
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 0, 255
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 239
+        Y: 110
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 402
+        Y: 18
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      GRAPH:
+        SHOW: False
+        X: 95
+        Y: 208
+        WIDTH: 50
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 195, 60, 15
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+      USED:
+        SHOW: False
+        SHOW_UNIT: True
+        X: 95
+        Y: 190
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 247, 138, 24
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 41
+        Y: 222
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+  DISK:
+    INTERVAL: 10
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 182
+        Y: 248
+        WIDTH: 98
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 0, 255
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 0, 0, 0
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 92
+        Y: 286
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 215
+        Y: 285
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+    TOTAL:
+      TEXT:
+        SHOW:  False
+        SHOW_UNIT: False
+        X: 158
+        Y: 286
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+    FREE:
+      TEXT:
+        SHOW:  True
+        SHOW_UNIT: False
+        X: 158
+        Y: 286
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+  NET:
+    INTERVAL: 1
+    WLO:
+      UPLOAD:
+        TEXT:
+          SHOW: False
+          X: 227
+          Y: 203
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 11
+          FONT_COLOR: 189, 207, 231
+          BACKGROUND_IMAGE: background.png
+      UPLOADED:
+        TEXT:
+          SHOW: False
+          X: 227
+          Y: 203
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 11
+          FONT_COLOR: 189, 207, 231
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        TEXT:
+          SHOW: False
+          X: 227
+          Y: 218
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 11
+          FONT_COLOR: 189, 207, 231
+          BACKGROUND_IMAGE: background.png
+      DOWNLOADED:
+        TEXT:
+          SHOW: False
+          X: 227
+          Y: 218
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 11
+          FONT_COLOR: 189, 207, 231
+          BACKGROUND_IMAGE: background.png
+    ETH:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 205
+          Y: 203
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 11
+          FONT_COLOR: 189, 207, 231
+          BACKGROUND_IMAGE: background.png
+      UPLOADED:
+        TEXT:
+          SHOW: False
+          X: 227
+          Y: 203
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 11
+          FONT_COLOR: 189, 207, 231
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 205
+          Y: 218
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 11
+          FONT_COLOR: 189, 207, 231
+          BACKGROUND_IMAGE: background.png
+      DOWNLOADED:
+        TEXT:
+          SHOW: False
+          X: 227
+          Y: 218
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 11
+          FONT_COLOR: 189, 207, 231
+          BACKGROUND_IMAGE: background.png
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        SHOW: True
+        X: 300
+        Y: 185
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png
+    HOUR:
+      TEXT:
+        SHOW: True
+        X: 300
+        Y: 210
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 189, 207, 231
+        BACKGROUND_IMAGE: background.png

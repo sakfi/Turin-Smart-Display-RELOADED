@@ -1,0 +1,223 @@
+---
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 255, 255, 0
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+  CPU_MODEL:
+    TEXT: Core i9-13900kf
+    X: 40
+    Y: 44
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  CPU_TEXT:
+    TEXT: CPU Temp
+    X: 63
+    Y: 190
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  CPU_FREQ:
+    TEXT: CPU
+    X: 180
+    Y: 355
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  GPU_MODEL:
+    TEXT: nvidia rtx 4090
+    X: 178
+    Y: 44
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  GPU_TEXT:
+    TEXT: gpu Temp
+    X: 201
+    Y: 190
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  GPU_FREQ:
+    TEXT: gpu
+    X: 180
+    Y: 375
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  RAM_MODEL:
+    TEXT: 32GB DDR5-5600
+    X: 42
+    Y: 335
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  MEM_USED:
+    TEXT: USED
+    X: 180
+    Y: 395
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  MEM_FREE:
+    TEXT: FREE
+    X: 180
+    Y: 415
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  MISC_TEXT:
+    TEXT: Misc
+    X: 215
+    Y: 335
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 37
+        Y: 85
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 40
+        Y: 130
+        WIDTH: 101
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 2, 216, 243
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 20
+        Y: 230
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 35
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 220
+        Y: 355
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 10
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 175
+        Y: 85
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 180
+        Y: 130
+        WIDTH: 101
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 2, 216, 243
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png    
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 160
+        Y: 230
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 35
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 227
+        Y: 375
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 10
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png    
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 37
+        Y: 375
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 40
+        Y: 420
+        WIDTH: 101
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 2, 216, 243
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+      USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 227
+        Y: 395
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 10
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+      FREE:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 227
+        Y: 415
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 10
+        FONT_COLOR: 255, 239, 8
+        BACKGROUND_IMAGE: background.png

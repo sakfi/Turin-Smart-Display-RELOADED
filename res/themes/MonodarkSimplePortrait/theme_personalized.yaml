@@ -1,0 +1,273 @@
+---
+author: "@douglas-ads"
+display:
+  DISPLAY_SIZE: 3.5"
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+
+static_text:
+  CPU:
+    TEXT: Intel Core i5-7600K
+    X: 110
+    Y: 30
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 150, 150, 150
+    BACKGROUND_IMAGE: background.png   
+
+  CPU2:
+    TEXT: USAGE
+    X: 118
+    Y: 70
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 180, 180, 180
+    BACKGROUND_IMAGE: background.png 
+
+  CPU3:
+    TEXT: TEMPERATURE
+    X: 190
+    Y: 70
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 180, 180, 180
+    BACKGROUND_IMAGE: background.png 
+
+  GPU:
+    TEXT: GeForce GTX 1060 6GB
+    X: 100
+    Y: 187
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 150, 150, 150
+    BACKGROUND_IMAGE: background.png   
+
+  GPU2:
+    TEXT: USAGE
+    X: 118
+    Y: 227
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 180, 180, 180
+    BACKGROUND_IMAGE: background.png 
+
+  GPU3:
+    TEXT: TEMPERATURE
+    X: 190
+    Y: 227
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 180, 180, 180
+    BACKGROUND_IMAGE: background.png 
+
+  MEMORY:
+    TEXT: DDR4 16GB
+    X: 32
+    Y: 390
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 150, 150, 150
+    BACKGROUND_IMAGE: background.png   
+
+  MEMORY2:
+    TEXT: Used   -
+    X: 25
+    Y: 420
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 180, 180, 180
+    BACKGROUND_IMAGE: background.png   
+
+  MEMORY3:
+    TEXT: Free   -
+    X: 28
+    Y: 437
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 180, 180, 180
+    BACKGROUND_IMAGE: background.png  
+
+  STORAGE:
+    TEXT: Disco C - 256GB
+    X: 167
+    Y: 390
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 150, 150, 150
+    BACKGROUND_IMAGE: background.png 
+ 
+  STORAGE2:
+    TEXT: Used   -
+    X: 180
+    Y: 420
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 180, 180, 180
+    BACKGROUND_IMAGE: background.png   
+
+  STORAGE3:
+    TEXT: Free   -
+    X: 183
+    Y: 437
+    FONT: geforce/geforce-bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 180, 180, 180
+    BACKGROUND_IMAGE: background.png  
+ 
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 90
+        Y: 90
+        WIDTH: 120
+        HEIGHT: 45
+        FONT: geforce/geforce-bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 230, 230, 230
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 91
+        WIDTH: 120
+        HEIGHT: 45
+        FONT: geforce/geforce-bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 230, 230, 230
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+  GPU:
+    INTERVAL: 2    
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 90
+        Y: 247
+        WIDTH: 120
+        HEIGHT: 45
+        FONT: geforce/geforce-bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 230, 230, 230
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 248
+        WIDTH: 120
+        HEIGHT: 45
+        FONT: geforce/geforce-bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 230, 230, 230
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 25
+        Y: 455
+        WIDTH: 115
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 150, 150, 150
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+      USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 87
+        Y: 420
+        WIDTH: 70
+        HEIGHT: 12
+        FONT: geforce/geforce-bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 230, 230, 230
+        BACKGROUND_IMAGE: background.png
+        ALIGH: left
+        ANCHOR: lt
+      FREE:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 87
+        Y: 437
+        WIDTH: 70
+        HEIGHT: 12
+        FONT: geforce/geforce-bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 230, 230, 230
+        BACKGROUND_IMAGE: background.png
+        ALIGH: left
+        ANCHOR: lt
+ 
+  DISK:
+    INTERVAL: 10
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 180
+        Y: 455
+        WIDTH: 115
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 150, 150, 150
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 238
+        Y: 420
+        WIDTH: 70
+        HEIGHT: 12
+        FONT: geforce/geforce-bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 230, 230, 230
+        BACKGROUND_IMAGE: background.png
+        ALIGH: left
+        ANCHOR: lt
+    FREE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 238
+        Y: 437
+        WIDTH: 70
+        HEIGHT: 12
+        FONT: geforce/geforce-bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 230, 230, 230
+        BACKGROUND_IMAGE: background.png
+        ALIGH: left
+        ANCHOR: lt
+
+  

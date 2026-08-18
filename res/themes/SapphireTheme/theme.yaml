@@ -1,0 +1,447 @@
+---
+author: "@jaohoeppers"
+
+display:
+  DISPLAY_SIZE: 3.5"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 255, 0, 140
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+static_text:
+
+#GPU ###########################################################
+
+  GPU_LABEL:
+    TEXT: "SAPPHIRE"
+    X: 305
+    Y: 20
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 30
+    FONT_COLOR: 255, 0, 140
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  GPU_NAME_LABEL:
+    TEXT: "9070XT Nitro+"
+    X: 320
+    Y: 50
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  GPU_TEMP_LABEL:
+    TEXT: "Temp:"
+    X: 296
+    Y: 90
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  GPU_USAGE_LABEL:
+    TEXT: "Uso:"
+    X: 296
+    Y: 130
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  GPU_VRAM_TITLE:
+    TEXT: "VRAM"
+    X: 268
+    Y: 165
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  
+  GPU_FAN_LABEL:
+    TEXT: "FAN"
+    X: 405
+    Y: 175
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 12
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+#CPU  ###########################################################
+
+  CPU_LABEL:
+    TEXT: "AMD"
+    X: 60
+    Y: 20
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 30
+    FONT_COLOR: 0, 224, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  CPU_NAME_LABEL:
+    TEXT: "R7 9800X3D"
+    X: 45
+    Y: 50
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  CPU_TEMP_LABEL:
+    TEXT: "Temp:"
+    X: 40
+    Y: 90
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  CPU_USAGE_LABEL:
+    TEXT: "Uso:"
+    X: 40
+    Y: 130
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  CPU_RAM_TITLE:
+    TEXT: "RAM"
+    X: 30
+    Y: 165
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  CPU_FAN_LABEL:
+    TEXT: "FAN"
+    X: 10
+    Y: 195
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 12
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 95
+        Y: 125
+        WIDTH: 70
+        HEIGHT: 20
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      LINE_GRAPH:
+        SHOW: True
+        X: 10
+        Y: 145
+        WIDTH: 200
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 30
+        AUTOSCALE: False
+        LINE_COLOR: 0, 224, 255
+        LINE_WIDTH: 2
+        AXIS: False
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 95
+        Y: 85
+        WIDTH: 70
+        HEIGHT: 20
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      LINE_GRAPH:
+        SHOW: True
+        X: 10
+        Y: 107
+        WIDTH: 200
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 30
+        AUTOSCALE: False
+        LINE_COLOR: 0, 224, 255
+        LINE_WIDTH: 2
+        AXIS: False
+        BACKGROUND_IMAGE: background.png
+    FAN_SPEED:
+      INTERVAL: 5
+      RADIAL:
+          SHOW: True
+          X: 35
+          Y: 235
+          RADIUS: 20
+          WIDTH: 18
+          MIN_VALUE: 0
+          MAX_VALUE: 100
+          ANGLE_START: -270
+          ANGLE_END: 90
+          ANGLE_STEPS: 15
+          ANGLE_SEP: 12
+          CLOCKWISE: True
+          BAR_COLOR: 0, 224, 255
+          BACKGROUND_IMAGE: background.png
+
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 350
+        Y: 125
+        WIDTH: 70
+        HEIGHT: 20
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      LINE_GRAPH:
+        SHOW: True
+        X: 268
+        Y: 145
+        WIDTH: 200
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 30
+        AUTOSCALE: False
+        LINE_COLOR: 255, 0, 140
+        LINE_WIDTH: 2
+        AXIS: False
+        BACKGROUND_IMAGE: background.png
+    MEMORY_PERCENT:
+      RADIAL:
+        SHOW: True
+        X: 355
+        Y: 205
+        RADIUS: 40
+        WIDTH: 18
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: -270
+        ANGLE_END: 90
+        ANGLE_STEPS: 25
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 255, 0, 140
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    MEMORY_USED:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 295
+        Y: 253
+        WIDTH: 120
+        HEIGHT: 20
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: mt
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 350
+        Y: 85
+        WIDTH: 70
+        HEIGHT: 20
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      LINE_GRAPH:
+        SHOW: True
+        X: 268
+        Y: 107
+        WIDTH: 200
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 30
+        AUTOSCALE: False
+        LINE_COLOR: 255, 0, 140
+        LINE_WIDTH: 2
+        AXIS: False
+        BACKGROUND_IMAGE: background.png
+    FPS:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 175
+        Y: 285
+        WIDTH: 68
+        HEIGHT: 25
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: mm
+    FAN_SPEED:
+      RADIAL:
+          SHOW: True
+          X: 445
+          Y: 205
+          RADIUS: 20
+          WIDTH: 18
+          MIN_VALUE: 0
+          MAX_VALUE: 100
+          ANGLE_START: -270
+          ANGLE_END: 90
+          ANGLE_STEPS: 15
+          ANGLE_SEP: 12
+          CLOCKWISE: True
+          BAR_COLOR: 255, 0, 140
+          BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 253
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+  MEMORY:
+    INTERVAL: 1
+    VIRTUAL:
+      RADIAL:
+        SHOW: True
+        X: 115
+        Y: 205
+        RADIUS: 40
+        WIDTH: 18
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: -270
+        ANGLE_END: 90
+        ANGLE_STEPS: 25
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 224, 255
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 60
+        Y: 253
+        WIDTH: 120
+        HEIGHT: 20
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: mt
+
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        FORMAT: short
+        SHOW: True
+        X: 170
+        Y: 210
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 17
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+    HOUR:
+      TEXT:
+        FORMAT: short
+        SHOW: True
+        X: 170
+        Y: 180
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+  CUSTOM:
+    INTERVAL: 1
+    GPU_POWER:
+      TEXT:
+        SHOW: True
+        X: 395
+        Y: 285
+        WIDTH: 68
+        HEIGHT: 25
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: mm

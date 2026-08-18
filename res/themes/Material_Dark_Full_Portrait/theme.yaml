@@ -1,0 +1,456 @@
+---
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 0, 0
+static_images:
+  BACKGROUND:
+    PATH: background_new.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+  CPU_MODEL:
+    TEXT: CPU
+    X: 12
+    Y: 20
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  CPU_TEXT:
+    TEXT: CPU Temp
+    X: 20
+    Y: 108
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  CPU_CLOCK:
+    TEXT: CLOCK
+    X: 20
+    Y: 142
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  DISK_TOTAL:
+    TEXT: TOTAL
+    X: 180
+    Y: 262
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  DISK_FREE:
+    TEXT: FREE
+    X: 180
+    Y: 287
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+
+  GPU_CLOCK:
+    TEXT: CLOCK
+    X: 180
+    Y: 142
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  GPU_MODEL:
+    TEXT: GPU
+    X: 174
+    Y: 20
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  GPU_TEXT:
+    TEXT: GPU Temp
+    X: 180
+    Y: 108
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  GPU_FREQ:
+    TEXT: VRAM
+    X: 20
+    Y: 252
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  RAM_MODEL:
+    TEXT: RAM
+    X: 12
+    Y: 180
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  MEM_USED:
+    TEXT: USED
+    X: 20
+    Y: 277
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  MEM_FREE:
+    TEXT: FREE
+    X: 20
+    Y: 302
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  DISK_TEXT:
+    TEXT: HDD
+    X: 174
+    Y: 180
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  NET_TEXT:
+    TEXT: NETWORK
+    X: 12
+    Y: 340
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  DOWNLOAD_TEXT:
+    TEXT: DOWNLOAD SPEED
+    X: 20
+    Y: 370
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  UPLOAD_TEXT:
+    TEXT: UPLOAD SPEED
+    X: 20
+    Y: 425
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+  DATE_TEXT:
+    TEXT: Date
+    X: 174
+    Y: 340
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 222, 222, 222
+    BACKGROUND_IMAGE: background_new.png
+STATS:
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        SHOW: True
+        X: 172
+        Y: 380
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background_new.png
+        WIDTH: 150
+        ANCHOR: lm
+    HOUR:
+      TEXT:
+        SHOW: True
+        X: 175
+        Y: 415
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background_new.png
+        WIDTH: 140
+        ANCHOR: lm
+  NET:
+    INTERVAL: 1
+    WLO:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 40
+          Y: 440
+          FONT: geforce/GeForce-Bold.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 222, 222, 222
+          BACKGROUND_IMAGE: background_new.png
+      UPLOADED:
+        TEXT:
+          SHOW: True
+          X: 40
+          Y: 460
+          FONT: geforce/GeForce-Bold.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 222, 222, 222
+          BACKGROUND_IMAGE: background_new.png
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 40
+          Y: 385
+          FONT: geforce/GeForce-Bold.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 222, 222, 222
+          BACKGROUND_IMAGE: background_new.png
+      DOWNLOADED:
+        TEXT:
+          SHOW: True
+          X: 40
+          Y: 405
+          FONT: geforce/GeForce-Bold.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 222, 222, 222
+          BACKGROUND_IMAGE: background_new.png
+  DISK:
+    INTERVAL: 10
+    USED:
+      RADIAL:
+        SHOW: True
+        X: 270
+        Y: 205
+        RADIUS: 35
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 220
+        ANGLE_END: 210
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 222, 222, 222
+        BAR_BACKGROUND_COLOR:  88, 88, 88
+        DRAW_BAR_BACKGROUND: True
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 222, 222, 222
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background_new.png
+    TOTAL:
+      TEXT:
+        SHOW: TRUE
+        SHOW_UNIT: True
+        X: 224
+        Y: 260
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background_new.png
+    FREE:
+      TEXT:
+        SHOW: TRUE
+        SHOW_UNIT: True
+        X: 224
+        Y: 285
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background_new.png
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      RADIAL:
+        SHOW: True
+        X: 110
+        Y: 45
+        RADIUS: 35
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 220
+        ANGLE_END: 210
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 222, 222, 222
+        BAR_BACKGROUND_COLOR:  88, 88, 88
+        DRAW_BAR_BACKGROUND: True
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 222, 222, 222
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background_new.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 80
+        Y: 105
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 222, 222, 222
+        BACKGROUND_IMAGE: background_new.png
+      GRAPH:
+        SHOW: True
+        X: 10
+        Y: 87
+        WIDTH: 140
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 222, 222, 222
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background_new.png   
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 65
+        Y: 140
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 222, 222, 222
+        BACKGROUND_IMAGE: background_new.png
+      GRAPH:
+        SHOW: True
+        X: 10
+        Y: 121
+        WIDTH: 140
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 222, 222, 222
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background_new.png   
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      RADIAL:
+        SHOW: True
+        X: 270
+        Y: 45
+        RADIUS: 35
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 220
+        ANGLE_END: 210
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 222, 222, 222
+        BAR_BACKGROUND_COLOR:  88, 88, 88
+        DRAW_BAR_BACKGROUND: True
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 222, 222, 222
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background_new.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 240
+        Y: 105
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 222, 222, 222
+        BACKGROUND_IMAGE: background_new.png
+      GRAPH:
+        SHOW: True
+        X: 170
+        Y: 87
+        WIDTH: 140
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 222, 222, 222
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background_new.png   
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 224
+        Y: 140
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 222, 222, 222
+        BACKGROUND_IMAGE: background_new.png
+      GRAPH:
+        SHOW: True
+        X: 170
+        Y: 121
+        WIDTH: 140
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 222, 222, 222
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background_new.png   
+    MEMORY:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 65
+        Y: 248
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 222, 222, 222
+        BACKGROUND_IMAGE: background_new.png    
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      RADIAL:
+        SHOW: True
+        X: 110
+        Y: 205
+        RADIUS: 35
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 220
+        ANGLE_END: 210
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 222, 222, 222
+        BAR_BACKGROUND_COLOR:  88, 88, 88
+        DRAW_BAR_BACKGROUND: True
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 222, 222, 222
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background_new.png
+      USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 65
+        Y: 273
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 222, 222, 222
+        BACKGROUND_IMAGE: background_new.png
+      FREE:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 65
+        Y: 298
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 222, 222, 222
+        BACKGROUND_IMAGE: background_new.png
+

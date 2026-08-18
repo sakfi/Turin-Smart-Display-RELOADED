@@ -1,0 +1,257 @@
+---
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 0, 0
+static_images:
+  BACKGROUND:
+    PATH: background_mtg.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+  MTG_TITLE:
+    TEXT: The Wall of Monitors
+    X: 35
+    Y: 21
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background_mtg.png
+  MTG_SUB_TITLE:
+    TEXT: Wall of Runes
+    X: 135
+    Y: 49
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background_mtg.png    
+  MTG_NAME:
+    TEXT: Artifact Construct - Wall
+    X: 35
+    Y: 311
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background_mtg.png   
+  MTG_DISC1:
+    TEXT: Defender (This creature cannot attack)
+    X: 35
+    Y: 341
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background_mtg.png       
+  MTG_DISC2:
+    TEXT: The Wall of Monitors is defending with.
+    X: 35
+    Y: 360
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background_mtg.png      
+  MTG_PT:
+    TEXT: 0/5
+    X: 252
+    Y: 430
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background_mtg.png      
+  CPU_LOAD:
+    TEXT: CPU LOAD
+    X: 80
+    Y: 75
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_mtg.png
+  GPU_LOAD:
+    TEXT: GPU LOAD
+    X: 235
+    Y: 75
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_mtg.png
+  CPU_TEMP:
+    TEXT: CPU TEMP
+    X: 75
+    Y: 190
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_mtg.png
+  GPU_TEMP:
+    TEXT: GPU TEMP
+    X: 235
+    Y: 191
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_mtg.png    
+  MEM_USED:
+    TEXT: USED
+    X: 160
+    Y: 385
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_IMAGE: background_mtg.png
+  MEM_FREE:
+    TEXT: FREE
+    X: 160
+    Y: 405
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 0, 255, 0
+    BACKGROUND_IMAGE: background_mtg.png   
+  VIDEO_RAM:
+    TEXT: VRAM
+    X: 170
+    Y: 270
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_IMAGE: background_mtg.png      
+  CPU_FREQ:
+    TEXT: FREQ
+    X: 10
+    Y: 270
+    FONT: mtg/magic.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_IMAGE: background_mtg.png     
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        LIMIT: true
+        X: 0
+        Y: 105
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 55
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_mtg.png
+      GRAPH:
+        SHOW: true
+        X: 22
+        Y: 160
+        WIDTH: 120
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background_mtg.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 0
+        Y: 220
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 55
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_mtg.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 73
+        Y: 273
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_mtg.png
+  GPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true        
+        LIMIT: true
+        X: 157
+        Y: 105
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 55
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_mtg.png
+      GRAPH:
+        SHOW: true
+        X: 179
+        Y: 160
+        WIDTH: 120
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background_mtg.png 
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 157
+        Y: 220
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 55
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_mtg.png
+    MEMORY:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 242
+        Y: 273
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_mtg.png    
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 10
+        Y: 385
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background_mtg.png
+      GRAPH:
+        SHOW: false
+        X: 20
+        Y: 450
+        WIDTH: 120
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 0, 0
+        BAR_OUTLINE: false
+        BACKGROUND_IMAGE: background_mtg.png
+      USED:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 210
+        Y: 388
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 10
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background_mtg.png
+      FREE:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 210
+        Y: 408
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 10
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background_mtg.png

@@ -1,0 +1,235 @@
+---
+author: "@alexwbaule"
+
+display:
+  DISPLAY_SIZE: 5"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 255
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 800
+    HEIGHT: 480
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        Y: 145
+        X: 110
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 360
+        Y: 145
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+      RADIAL:
+        SHOW: True
+        X: 146
+        Y: 160
+        RADIUS: 80
+        WIDTH: 10
+        MIN_VALUE: 30
+        MAX_VALUE: 90
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: False
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png 
+
+    FREQUENCY:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 605
+        Y: 145
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  GPU:
+    INTERVAL: 2
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 110
+        Y: 390
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 360
+        Y: 390
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 600
+        Y: 390
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+static_text:
+  # --- HEADERS ---
+  CPU_HEADER:
+    TEXT: "AMD Ryzen 9 - 5950X"
+    X: 90
+    Y: 10
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 60 
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background.png
+  CPU_HEADER2:
+    TEXT: "Load"
+    X: 115
+    Y: 110
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 100, 255
+    BACKGROUND_IMAGE: background.png
+
+  CPU_HEADER3:
+    TEXT: "%"
+    X: 135
+    Y: 190
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 100, 255
+    BACKGROUND_IMAGE: background.png
+
+  CPU_HEADER4:
+    TEXT: "Temp"
+    X: 365
+    Y: 110
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 100, 255
+    BACKGROUND_IMAGE: background.png
+
+  CPU_HEADER5:
+    TEXT: "°C"
+    X: 385
+    Y: 190
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 100, 255
+    BACKGROUND_IMAGE: background.png
+  
+  CPU_HEADER6:
+    TEXT: "GHz"
+    X: 625
+    Y: 190
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 100, 255
+    BACKGROUND_IMAGE: background.png
+  
+  CPU_HEADER7:
+    TEXT: "Speed"
+    X: 612
+    Y: 110
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 100, 255
+    BACKGROUND_IMAGE: background.png
+
+  GPU_HEADER:
+    TEXT: "Nvidia - RTX 4080"
+    X: 140
+    Y: 260
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 60
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background.png
+
+  GPU_HEADER2:
+    TEXT: "Load"
+    X: 115
+    Y: 355
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 150, 255
+    BACKGROUND_IMAGE: background.png
+
+  GPU_HEADER3:
+    TEXT: "%"
+    X: 135
+    Y: 440
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 180, 255
+    BACKGROUND_IMAGE: background.png
+
+  GPU_HEADER4:
+    TEXT: "Temp"
+    X: 365
+    Y: 355
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 150, 255
+    BACKGROUND_IMAGE: background.png
+
+  GPU_HEADER5:
+    TEXT: "°C"
+    X: 385
+    Y: 440
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 180, 255
+    BACKGROUND_IMAGE: background.png
+  
+  GPU_HEADER6:
+    TEXT: "MB"
+    X: 633
+    Y: 440
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 180, 255
+    BACKGROUND_IMAGE: background.png
+  
+  GPU_HEADER7:
+    TEXT: "Mem"
+    X: 624
+    Y: 355
+    FONT: geforce/GeForce-Bold.ttf
+    FONT_SIZE: 30 
+    FONT_COLOR: 255, 150, 255
+    BACKGROUND_IMAGE: background.png
+

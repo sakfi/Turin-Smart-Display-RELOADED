@@ -1,0 +1,389 @@
+---
+author: "@DonAlcasan"
+
+display:
+  DISPLAY_SIZE: 8.8"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 224, 2, 48
+
+static_images:
+  BACKGROUND:
+    PATH:  background.png
+    X: 0
+    Y: 0
+    WIDTH: 1920
+    HEIGHT: 480
+
+static_text:
+  CPU:
+   TEXT: Ryzen 9 7950X3D #Change your CPU here.
+   X: 345
+   Y: 50
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 220, 220, 220
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  RAM:
+   TEXT: Corsair Vengeance #Change your RAM here.
+   X: 1590
+   Y: 50
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 220, 220, 220
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  GPU:
+   TEXT: Radeon RX 9070 XT #Change your GPU here.
+   X: 975
+   Y: 50
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 220, 220, 220
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      RADIAL:
+        SHOW: True
+        X: 222
+        Y: 200
+        RADIUS: 105
+        WIDTH: 22
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 140
+        ANGLE_END: 40
+        ANGLE_STEPS: 10
+        ANGLE_SEP: 7
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        BAR_BACKGROUND_COLOR:  80, 0, 0
+        DRAW_BAR_BACKGROUND: False
+        #BAR_DECORATION: Ellipse
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 90
+        FONT_COLOR: 255, 255, 255
+        TEXT_OFFSET: [-10, -20]
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: true
+        X: 375
+        Y: 127
+        WIDTH: 245
+        HEIGHT: 30
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: true
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 547
+        Y: 100
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: true
+        X: 375
+        Y: 187
+        WIDTH: 245
+        HEIGHT: 30
+        MIN_VALUE: 0.0
+        MAX_VALUE: 6.0
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: true
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 495
+        Y: 160
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      RADIAL:
+        SHOW: True
+        X: 844
+        Y: 200
+        RADIUS: 105
+        WIDTH: 22
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 140
+        ANGLE_END: 40
+        ANGLE_STEPS: 10
+        ANGLE_SEP: 7
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        BAR_BACKGROUND_COLOR:  80, 0, 0
+        DRAW_BAR_BACKGROUND: False
+        #BAR_DECORATION: Ellipse
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 90
+        FONT_COLOR: 255, 255, 255
+        TEXT_OFFSET: [-10, -20]
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: true
+        X: 997
+        Y: 127
+        WIDTH: 245
+        HEIGHT: 30
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: true
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1170
+        Y: 100
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: true
+        X: 997
+        Y: 187
+        WIDTH: 245
+        HEIGHT: 30
+        MIN_VALUE: 0.0
+        MAX_VALUE: 3.9
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: true
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1117
+        Y: 160
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: true
+        X: 997
+        Y: 245
+        WIDTH: 245
+        HEIGHT: 30
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: true
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1123
+        Y: 220
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  MEMORY:
+    INTERVAL: 1
+    VIRTUAL:
+     RADIAL:
+        SHOW: True
+        X: 1467
+        Y: 200
+        RADIUS: 105
+        WIDTH: 22
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 140
+        ANGLE_END: 40
+        ANGLE_STEPS: 10
+        ANGLE_SEP: 7
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        BAR_BACKGROUND_COLOR:  80, 0, 0
+        DRAW_BAR_BACKGROUND: False
+        #BAR_DECORATION: Ellipse
+        SHOW_TEXT: True
+        SHOW_UNIT: False
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 90
+        FONT_COLOR: 255, 255, 255
+        TEXT_OFFSET: [-10, -20]
+        BACKGROUND_IMAGE: background.png
+     TOTAL:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1745
+        Y: 160
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+     USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1745
+        Y: 100
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  DISK:
+    INTERVAL: 25
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 175
+        Y: 396
+        WIDTH: 290
+        HEIGHT: 30
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        X: 175
+        Y: 355
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 132, 154, 125
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        X: 465
+        Y: 400
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TOTAL:
+      TEXT:
+        SHOW: True
+        X: 425
+        Y: 355
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FREE:
+      TEXT:
+        SHOW: True
+        X: 297
+        Y: 355
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  NET:
+    INTERVAL: 1
+    ETH:
+      UPLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 980
+          Y: 365
+          WIDTH: 180
+          HEIGHT: 70
+          MIN_VALUE: 0
+          MAX_VALUE: 99999999999
+          HISTORY_SIZE: 60
+          AUTOSCALE: True
+          LINE_COLOR: 255, 255, 255
+          AXIS: True
+          BACKGROUND_IMAGE: background.png
+        TEXT:
+          SHOW: True
+          X: 980
+          Y: 330
+          FONT: roboto-mono/RobotoMono-Medium.ttf
+          FONT_SIZE: 30
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 765
+          Y: 365
+          WIDTH: 180
+          HEIGHT: 70
+          MIN_VALUE: 0
+          MAX_VALUE: 99999999999
+          HISTORY_SIZE: 60
+          AUTOSCALE: True
+          LINE_COLOR: 255, 255, 255
+          AXIS: True
+          BACKGROUND_IMAGE: background.png
+        TEXT:
+          SHOW: True
+          X: 765
+          Y: 330
+          FONT: roboto-mono/RobotoMono-Medium.ttf
+          FONT_SIZE: 30
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+
+  DATE:
+    # For time display, it is recommended not to change the interval: keep to 1
+    INTERVAL: 1
+    HOUR: # Format (12/24h, timezone translations) will match your computer locale
+      TEXT:
+        FORMAT: short # short (6:48 PM) / medium (6:48:53 PM) / long (6:48:53 PM UTC) / full (6:48:53 PM Coordinated Universal Time) / custom pattern e.g. "HH:mm:ss zzz" (6:48:53 EDT)
+        SHOW: True
+        X: 1460
+        Y: 330
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    DAY: # Format (Y/M/D ordering, month/day translations...) will match your computer localeAdd commentMore actions
+      TEXT:
+        FORMAT: dd/MM/yyyy # short (2/20/23) / medium (Feb 20, 2023) / long (February 20, 2023) / full (Monday, February 20, 2023) / custom pattern e.g. "yyyy.MM.dd" (2024.02.20)
+        SHOW: True
+        X: 1460
+        Y: 385
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+

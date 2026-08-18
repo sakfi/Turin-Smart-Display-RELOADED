@@ -1,0 +1,317 @@
+author: "XxYouDeaDPunkxX"
+display:
+  DISPLAY_SIZE: 0.96"
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 80
+    HEIGHT: 160
+
+static_text:
+  CPU_LABEL:
+    TEXT: "CPU"
+    X: 0
+    Y: 2
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 14
+    FONT_COLOR: 0, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  CPU_TEMP_LABEL:
+    TEXT: "TEMP:"
+    X: 0
+    Y: 18
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 13
+    FONT_COLOR: 0, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  CPU_FAN_LABEL:
+    TEXT: "FAN:"
+    X: 0
+    Y: 31
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 13
+    FONT_COLOR: 0, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  CPU_FREQ_LABEL:
+    TEXT: "FREQ:"
+    X: 0
+    Y: 45
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 8
+    FONT_COLOR: 0, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  GPU_LABEL:
+    TEXT: "GPU"
+    X: 0
+    Y: 60
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 14
+    FONT_COLOR: 255, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  GPU_TEMP_LABEL:
+    TEXT: "TEMP:"
+    X: 0
+    Y: 74
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 13
+    FONT_COLOR: 255, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  GPU_FAN_LABEL:
+    TEXT: "FAN:"
+    X: 0
+    Y: 88
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 13
+    FONT_COLOR: 255, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  MEM_LABEL:
+    TEXT: "RAM"
+    X: 0
+    Y: 103
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 13
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  DISK_LABEL:
+    TEXT: "DSK"
+    X: 0
+    Y: 119
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 13
+    FONT_COLOR: 0, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  NET_UPL_LABEL:
+    TEXT: "UP"
+    X: 0
+    Y: 134
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 0, 255, 128
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  NET_DWL_LABEL:
+    TEXT: "DW"
+    X: 0
+    Y: 148
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 10
+    FONT_COLOR: 255, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 3
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+      GRAPH:
+        SHOW: true
+        X: 28
+        Y: 7
+        WIDTH: 20
+        HEIGHT: 4
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 18
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+    FAN_SPEED:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 31
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+    FREQUENCY:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 45
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 62
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 255, 255, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+      GRAPH:
+        SHOW: true
+        X: 28
+        Y: 66
+        WIDTH: 20
+        HEIGHT: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 255, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 74
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 255, 255, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+    FAN_SPEED:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 88
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 255, 255, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+  MEMORY:
+    INTERVAL: 1
+    VIRTUAL:
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 103
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+      GRAPH:
+        SHOW: true
+        X: 28
+        Y: 107
+        WIDTH: 20
+        HEIGHT: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 255, 255
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+  DISK:
+    INTERVAL: 1
+    USED:
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 80
+        Y: 119
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+      GRAPH:
+        SHOW: true
+        X: 28
+        Y: 123
+        WIDTH: 20
+        HEIGHT: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 255
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+  NET:
+    INTERVAL: 1
+    WLO:
+      UPLOAD:
+        TEXT:
+          SHOW: true
+          SHOW_UNIT: true
+          X: 78
+          Y: 136
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 10
+          FONT_COLOR: 0, 255, 128
+          BACKGROUND_IMAGE: background.png
+          ALIGN: right
+          ANCHOR: rt
+      DOWNLOAD:
+        TEXT:
+          SHOW: true
+          SHOW_UNIT: true
+          X: 78
+          Y: 150
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 10
+          FONT_COLOR: 255, 255, 0
+          BACKGROUND_IMAGE: background.png
+          ALIGN: right
+          ANCHOR: rt

@@ -1,0 +1,312 @@
+author: "Erdan"
+
+display:
+  DISPLAY_SIZE: 3.5"
+  DISPLAY_ORIENTATION: landscape
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+
+static_text:
+  CPU_LBL:
+    TEXT: "CPU"
+    X: 22
+    Y: 28
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 255,255,255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+
+  CPU1_LBL:
+    TEXT: "USAGE"
+    X: 22
+    Y: 52
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf 
+    FONT_SIZE: 22  
+    FONT_COLOR: 200, 220, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt 
+
+  CPU2_LBL:
+    TEXT: "TEMP"
+    X: 22
+    Y: 80
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf 
+    FONT_SIZE: 22  
+    FONT_COLOR: 255, 200, 140
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt 
+
+    
+
+  GPU_LBL:
+    TEXT: "GPU"
+    X: 292
+    Y: 28
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 255,255,255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+
+  GPU1_LBL:
+    TEXT: "USAGE"
+    X: 293
+    Y: 52
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf 
+    FONT_SIZE: 22  
+    FONT_COLOR: 200, 220, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt 
+
+  GPU2_LBL:
+    TEXT: "TEMP"
+    X: 293
+    Y: 80
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf 
+    FONT_SIZE: 22  
+    FONT_COLOR: 255, 200, 140
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt 
+
+
+  RAM_LBL:
+    TEXT: "RAM"
+    X: 22
+    Y: 210
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 255,255,255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  RAM1_LBL:
+    TEXT: "/"
+    X: 104
+    Y: 269
+    FONT: segoeui.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 220, 220, 220
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+
+  RAM2_LBL:
+    TEXT: "USED"
+    X: 24
+    Y: 255
+    FONT: segoeui.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 220, 220, 220
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+
+  RAM3_LBL:
+    TEXT: "TOTAL"
+    X: 143
+    Y: 255
+    FONT: segoeui.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 220, 220, 220
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+
+
+  NET_LBL:
+    TEXT: "NETWORK"
+    X: 294
+    Y: 210
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 255,255,255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  DL_LBL:
+    TEXT: "DOWNLOAD"
+    X: 295
+    Y: 242
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 180,220,255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+  UL_LBL:
+    TEXT: "UPLOAD"
+    X: 295
+    Y: 258
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 180,255,180
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+
+
+STATS:
+
+  CUSTOM:
+    RamGbText:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        X: 25
+        Y: 245
+        FONT: segoeui.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 150
+        Y: 57
+        FONT: segoeuib.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 230,240,255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: mm
+
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 152
+        Y: 85
+        FONT: segoeuib.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 230,240,255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: mm
+
+
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 420
+        Y: 57
+        FONT: segoeuib.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 230,240,255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: mm
+
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 422
+        Y: 85
+        FONT: segoeuib.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 230,240,255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: mm
+
+
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 60
+        Y: 230
+        FONT: segoeuib.ttf
+        FONT_SIZE: 36
+        FONT_COLOR: 230,240,255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+      USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 24
+        Y: 270
+        FONT: segoeui.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+      TOTAL:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 126
+        Y: 270
+        FONT: segoeui.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+
+  NET:
+    INTERVAL: 1
+    ETH:
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          SHOW_UNIT: True
+          X: 374
+          Y: 242
+          FONT: segoeuib.ttf
+          FONT_SIZE: 17
+          FONT_COLOR: 255,255,255
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left
+          ANCHOR: lt
+
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          SHOW_UNIT: True
+          X: 374
+          Y: 258
+          FONT: segoeuib.ttf
+          FONT_SIZE: 17
+          FONT_COLOR: 255,255,255
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left
+          ANCHOR: lt

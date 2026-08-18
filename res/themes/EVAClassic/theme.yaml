@@ -1,0 +1,206 @@
+display:
+  DISPLAY_SIZE: 3.5"
+
+  DISPLAY_ORIENTATION: landscape
+
+  DISPLAY_RGB_LED: 255, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+static_text:
+  PC_TITLE:
+    TEXT: EVANGELION
+    X: 230
+    Y: 180
+    FONT: eva-matisse/EVA-Matisse_Classic.ttf
+    FONT_SIZE: 30
+    FONT_COLOR: 251, 227, 24
+    BACKGROUND_IMAGE: background.png
+  CPU_MODEL:
+    TEXT: AMD Ryzen 5600X
+    X: 193
+    Y: 28
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 9
+    FONT_COLOR: 251, 227, 24
+    BACKGROUND_IMAGE: background.png
+  GPU_MODEL:
+    TEXT: RTX 3060Ti
+    X: 193
+    Y: 101
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 9
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+  RAM_MODEL:
+    TEXT: Corsair Vengeance LPX
+    X: 160
+    Y: 60
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 9
+    FONT_COLOR: 255, 239, 8
+    BACKGROUND_IMAGE: background.png
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 290
+        Y: 35
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 195
+        Y: 40
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 17
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 70
+        Y: 178
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      GRAPH:
+        SHOW: True
+        X: 160
+        Y: 113
+        WIDTH: 125
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 251, 227, 24
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 290
+        Y: 106
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 131
+        Y: 178
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 160
+        Y: 72
+        WIDTH: 125
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 251, 227, 24
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 290
+        Y: 71
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png
+  DISK:
+    INTERVAL: 10
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 185
+        Y: 150
+        WIDTH: 100
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 251, 227, 24
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 290
+        Y: 143
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png
+  NET:
+    INTERVAL: 1
+    ETH:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 397
+          Y: 108
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 9
+          FONT_COLOR: 251, 227, 24
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 397
+          Y: 142
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 9
+          FONT_COLOR: 251, 227, 24
+          BACKGROUND_IMAGE: background.png
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        FORMAT: medium 
+        SHOW: True
+        X: 350
+        Y: 220
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png
+    HOUR:
+      TEXT:
+        FORMAT: medium
+        SHOW: True
+        X: 42
+        Y: 250
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 62
+        FONT_COLOR: 251, 227, 24
+        BACKGROUND_IMAGE: background.png

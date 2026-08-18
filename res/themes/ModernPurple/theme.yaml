@@ -1,0 +1,249 @@
+---
+author: "@Fenjce"
+
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 0, 0
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+  cpu_label:
+    TEXT: "I5 12400F"
+    X: 110
+    Y: 142
+    FONT: roboto/Roboto-Regular.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  gpu_label:
+    TEXT: "RTX 3070TI"
+    X: 110
+    Y: 226
+    FONT: roboto/Roboto-Regular.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  ram_label:
+    TEXT: "XPG Spectrix D50 RGB"
+    X: 60
+    Y: 327
+    FONT: roboto/Roboto-Regular.ttf
+    FONT_SIZE: 20
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  /_label:
+    TEXT: "/"
+    X: 200
+    Y: 366
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 16
+    FONT_COLOR: 220, 220, 220
+    BACKGROUND_IMAGE: background.png
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      GRAPH:
+        SHOW: True
+        X: 109
+        Y: 162
+        WIDTH: 183
+        HEIGHT: 6
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 67, 119, 241
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 105, 101, 98
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 95
+        Y: 182
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 29
+        Y: 168
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  GPU:
+    INTERVAL: 2
+    PERCENTAGE:
+      GRAPH:
+        SHOW: True
+        X: 109
+        Y: 246
+        WIDTH: 183
+        HEIGHT: 6
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 203, 118, 255
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 105, 101, 98
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 95
+        Y: 266
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 29
+        Y: 252
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 29
+        Y: 351
+        WIDTH: 263
+        HEIGHT: 6
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 211, 173
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 105, 101, 98
+      USED:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 132
+        Y: 366
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+      TOTAL:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 220
+        Y: 366
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 30
+        Y: 366
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+  NET:
+    INTERVAL: 2
+    ETH:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 64
+          Y: 414
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 13
+          FONT_COLOR: 220, 220, 220
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 224
+          Y: 414
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 13
+          FONT_COLOR: 220, 220, 220
+          BACKGROUND_IMAGE: background.png
+    WLO:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 64
+          Y: 454
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 13
+          FONT_COLOR: 220, 220, 220
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 224
+          Y: 454
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 13
+          FONT_COLOR: 220, 220, 220
+          BACKGROUND_IMAGE: background.png
+
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        FORMAT: medium
+        SHOW: True
+        X: 18
+        Y: 18
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+    HOUR:
+      TEXT:
+        FORMAT: short
+        SHOW: True
+        X: 215
+        Y: 18
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+  UPTIME:
+    INTERVAL: 1
+    FORMATTED:
+      TEXT:
+        SHOW: True
+        X: 220
+        Y: 79
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 17
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+  PING:
+    INTERVAL: 10
+    TEXT:
+      SHOW: True
+      SHOW_UNIT: True
+      X: 40
+      Y: 79
+      FONT: roboto-mono/RobotoMono-Bold.ttf
+      FONT_SIZE: 17
+      FONT_COLOR: 220, 220, 220
+      BACKGROUND_IMAGE: background.png

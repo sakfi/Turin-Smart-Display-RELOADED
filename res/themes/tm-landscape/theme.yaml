@@ -1,0 +1,211 @@
+
+---
+
+author: "@approxit1"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 0
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 4
+      LINE_GRAPH:
+        SHOW: True
+        X: 20
+        Y: 71
+        WIDTH: 115
+        HEIGHT: 53
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: True
+        LINE_COLOR: 53, 171, 211
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 60
+        Y: 163
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 4
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 60
+        Y: 140
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 175, 175, 175
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 4
+    PERCENTAGE:
+      LINE_GRAPH:
+        SHOW: True
+        X: 174
+        Y: 71
+        WIDTH: 115
+        HEIGHT: 53
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 184, 87, 200
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 215
+        Y: 163
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 4
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 215
+        Y: 140
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 4
+    VIRTUAL:
+      LINE_GRAPH:
+        SHOW: True
+        X: 326
+        Y: 71
+        WIDTH: 115
+        HEIGHT: 53
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 89, 152, 239
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        BACKGROUND_IMAGE: background.png
+      USED:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 384
+        Y: 140
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 371
+        Y: 163
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        BACKGROUND_IMAGE: background.png
+  NET:
+    INTERVAL: 3
+    WLO:
+      UPLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 19
+          Y: 230
+          WIDTH: 115
+          HEIGHT: 23
+          MIN_VALUE: 0
+          MAX_VALUE: 9000000
+          HISTORY_SIZE: 50
+          AUTOSCALE: False
+          LINE_COLOR: 215, 85, 124
+          LINE_WIDTH: 3
+          AXIS: False
+          AXIS_COLOR: 250, 30, 0
+          BACKGROUND_IMAGE: background.png
+        TEXT:
+          SHOW: True
+          SHOW_UNIT: True
+          X: 64
+          Y: 300
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 175, 175, 175
+          BACKGROUND_IMAGE: background.png
+          ALIGN: center
+          ANCHOR: ms
+      DOWNLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 172
+          Y: 230
+          WIDTH: 115
+          HEIGHT: 22
+          MIN_VALUE: 0
+          MAX_VALUE: 90000000
+          HISTORY_SIZE: 50
+          AUTOSCALE: False
+          LINE_COLOR: 92, 158, 250
+          LINE_WIDTH: 3
+          AXIS: False
+          AXIS_COLOR: 170, 170, 170
+          BACKGROUND_IMAGE: background.png
+        TEXT:
+          SHOW: True
+          SHOW_UNIT: True
+          X: 218
+          Y: 300
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 175, 175, 175
+          BACKGROUND_IMAGE: background.png
+          ALIGN: center
+          ANCHOR: ms
+  DISK:
+    INTERVAL: 600
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 328
+        Y: 199
+        WIDTH: 117
+        HEIGHT: 61
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 130, 130, 130
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 333
+        Y: 300
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 175, 175, 175
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: ms

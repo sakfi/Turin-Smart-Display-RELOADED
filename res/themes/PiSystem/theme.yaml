@@ -1,0 +1,265 @@
+# This theme is intended for a Headless Raspberry Pi or similar Linux devices.
+# It uses the new Custom device interfaces to gain information from the Pi
+# Special Note it requires the install psutil (pip install psutil) for the 
+# sensor_custom.py to work
+---
+author: "MarkO"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 61, 184, 225
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+static_text:
+  CPU_TEXT_LABEL:
+    TEXT: CPU
+    X: 80
+    Y: 40
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 200, 200, 200
+    BACKGROUND_IMAGE: background.png
+
+  MEMORY_TEXT_LABEL:
+    TEXT: MEMORY
+    X: 210
+    Y: 40
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 200, 200, 200
+    BACKGROUND_IMAGE: background.png
+
+  DISK_TEXT_LABEL:
+    TEXT: DISK
+    X: 368
+    Y: 40
+    FONT: roboto-mono/RobotoMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 200, 200, 200
+    BACKGROUND_IMAGE: background.png
+
+#  CPU_SPEED_LABEL:
+#    TEXT: Speed
+#    X: 32
+#    Y: 166
+#    FONT: roboto-mono/RobotoMono-Bold.ttf
+#    FONT_SIZE: 14
+#    FONT_COLOR: 200, 200, 200
+    # BACKGROUND_COLOR: 50, 0, 0
+#    BACKGROUND_IMAGE: background.png
+    
+#  FREQ_GHZ_LABEL:
+#    TEXT: GHz
+#    X: 142
+#    Y: 166
+#    FONT: roboto-mono/RobotoMono-Bold.ttf
+#    FONT_SIZE: 14
+#    FONT_COLOR: 200, 200, 200
+#    # BACKGROUND_COLOR: 50, 0, 0
+#    BACKGROUND_IMAGE: background.png   
+    
+#  CPU_TEMP_LABEL:
+#    TEXT: Temp
+#    X: 32
+#    Y: 190
+#    FONT: roboto-mono/RobotoMono-Bold.ttf
+#    FONT_SIZE: 14
+#    FONT_COLOR: 200, 200, 200
+    # BACKGROUND_COLOR: 50, 0, 0
+#    BACKGROUND_IMAGE: background.png    
+ 
+
+STATS:
+  DATE:
+    INTERVAL: 1
+    HOUR:
+      TEXT:
+        SHOW: True
+        X: 180
+        Y: 6
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      RADIAL:
+        SHOW: True
+        X: 94
+        Y: 110
+        RADIUS: 46
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 99
+        ANGLE_START: 150
+        ANGLE_END: 30
+        ANGLE_STEPS: 25
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 250, 138, 24
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 46
+        Y: 156
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 250, 138, 24
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 58
+        Y: 178
+        FONT: generale-mono/GeneraleMonoC.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+     INTERVAL: 3
+     VIRTUAL:
+       RADIAL:
+        SHOW: True
+        X: 240
+        Y: 110
+        RADIUS: 46
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 99
+        ANGLE_START: 150
+        ANGLE_END: 30
+        ANGLE_STEPS: 25
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 250, 138, 24
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+       USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 156
+        FONT: generale-mono/GeneraleMonoC.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 250, 138, 24
+        BACKGROUND_IMAGE: background.png
+# Note: gives incorrect value on Raspberry Pi 4        
+#       FREE:
+#        SHOW: True
+#        SHOW_UNIT: True
+#        X: 200
+#        Y: 178
+#        FONT: generale-mono/GeneraleMonoC.ttf
+#        FONT_SIZE: 18
+#        FONT_COLOR: 200, 200, 200
+#        BACKGROUND_IMAGE: background.png
+
+  DISK:
+     INTERVAL: 8
+     USED:
+       RADIAL:
+        SHOW: True
+        X: 386
+        Y: 110
+        RADIUS: 46
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 99
+        ANGLE_START: 150
+        ANGLE_END: 30
+        ANGLE_STEPS: 25
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 250, 138, 24
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+       TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 338
+        Y: 156
+        FONT: generale-mono/GeneraleMonoC.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 250, 138, 24
+        BACKGROUND_IMAGE: background.png
+     TOTAL:
+       TEXT:   
+        SHOW: True
+        SHOW_UNIT: True
+        X: 338
+        Y: 178
+        FONT: generale-mono/GeneraleMonoC.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+        
+  # All custom sensor classes are listed under CUSTOM
+  CUSTOM:
+    # For now the refresh interval (in seconds) is the same for all custom data classes
+    INTERVAL: 3
+
+    SystemGetMemorySize:
+      TEXT:
+        SHOW: True
+        X: 188
+        Y: 178
+        FONT: generale-mono/GeneraleMonoC.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png   
+
+    SystemGetOsInfo:
+      TEXT:
+        SHOW: True
+        X: 32
+        Y: 228
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 159, 176, 188
+        BACKGROUND_IMAGE: background.png
+
+    SystemGetHostName:
+      TEXT:
+        SHOW: True
+        X: 32
+        Y: 252
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 159, 176, 188
+        BACKGROUND_IMAGE: background.png
+
+    SystemGetIPAddress:
+      TEXT:
+        SHOW: True
+        X: 32
+        Y: 276
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 159, 176, 188
+        BACKGROUND_IMAGE: background.png

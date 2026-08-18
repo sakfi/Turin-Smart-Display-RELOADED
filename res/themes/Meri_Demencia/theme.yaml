@@ -1,0 +1,184 @@
+# Meri Demencia
+---
+#Highlight color : 187, 37, 58
+
+author: "@gonztok"
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_SIZE: 3.5"
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+static_text:
+  LABEL_CPU:
+    TEXT: "@"
+    X: 130
+    Y: 66
+    FONT: ryzen/ryzen.ttf
+    FONT_SIZE: 12
+    FONT_COLOR: 187, 37, 58
+    BACKGROUND_IMAGE: background.png
+  LABEL_CPUTEMP:
+    TEXT: "TEMPERATURE"
+    X: 360
+    Y: 12
+    FONT: ryzen/ryzen.ttf
+    FONT_SIZE: 8
+    FONT_COLOR: 187, 37, 58
+    BACKGROUND_IMAGE: background.png
+  LABEL_CPUTEMPUNIT:
+    TEXT: "°C"
+    X: 428
+    Y: 31
+    FONT: spy-agency/spyagency.ttf
+    FONT_SIZE: 36
+    FONT_COLOR: 187, 37, 58
+    BACKGROUND_IMAGE: background.png
+    BACKGROUND_COLOR: 184, 41, 16
+  LABEL_GPUTEMPUNIT:
+    TEXT: "°C"
+    X: 428
+    Y: 237
+    FONT: spy-agency/spyagency.ttf
+    FONT_SIZE: 36
+    FONT_COLOR: 187, 37, 58
+    BACKGROUND_IMAGE: background.png
+    BACKGROUND_COLOR: 184, 41, 16
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      GRAPH:
+        SHOW: True
+        X: 265
+        Y: 67
+        WIDTH: 200
+        HEIGHT: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 187, 37, 58
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png        
+        BACKGROUND_COLOR: 0, 255, 0        
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 335
+        Y: 67
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        X: 150
+        Y: 67
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        BACKGROUND_COLOR: 184, 41, 16
+    TEMPERATURE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 350
+        Y: 32
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        BACKGROUND_COLOR: 184, 41, 16
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 390
+        Y: 274
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 10
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 396
+        Y: 274
+        WIDTH: 74
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 187, 37, 58
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png        
+    MEMORY:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 390
+        Y: 296
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 10
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 396
+        Y: 296
+        WIDTH: 74
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 187, 37, 58
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png        
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 350
+        Y: 238
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FPS:
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 250
+        Y: 255
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 48
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+  DATE:
+    INTERVAL: 1
+    HOUR:
+      TEXT:
+        FORMAT: short
+        SHOW: True
+        X: 150
+        Y: 30
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    DAY:
+      TEXT:
+        FORMAT: medium
+        SHOW: True
+        X: 155
+        Y: 10
+        FONT: ryzen/ryzen.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 187, 37, 58
+        BACKGROUND_IMAGE: background.png    

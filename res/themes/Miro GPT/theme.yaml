@@ -1,0 +1,163 @@
+---
+author: "Mirobane x GPT"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 120, 0, 255
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+STATS:
+
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      GRAPH:
+        SHOW: True
+        X: 315
+        Y: 82
+        WIDTH: 140
+        HEIGHT: 17
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 120, 0, 255
+        BACKGROUND_COLOR: 40, 20, 60
+
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 375
+        Y: 63
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 380
+        Y: 65
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 12
+        FONT_COLOR: 200, 200, 255
+        BACKGROUND_IMAGE: background.png
+
+  GPU:
+    INTERVAL: 2
+    PERCENTAGE:
+      GRAPH:
+        SHOW: True
+        X: 315
+        Y: 147
+        WIDTH: 140
+        HEIGHT: 18
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 200, 0, 200
+        BACKGROUND_COLOR: 40, 20, 60
+
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 375
+        Y: 127
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 380
+        Y: 129
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 12
+        FONT_COLOR: 200, 200, 255
+        BACKGROUND_IMAGE: background.png
+
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 315
+        Y: 213
+        WIDTH: 140
+        HEIGHT: 17
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 180, 180, 255
+        BACKGROUND_COLOR: 40, 20, 60
+
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 375
+        Y: 194
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+
+      USED:
+        SHOW: True
+        X: 400
+        Y: 198
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 12
+        FONT_COLOR: 200, 200, 255
+        BACKGROUND_IMAGE: background.png
+
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        FORMAT: medium
+        SHOW: True
+        X: 220
+        Y: 28
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 200, 200, 255
+        BACKGROUND_IMAGE: background.png
+
+    HOUR:
+      TEXT:
+        FORMAT: short
+        SHOW: True
+        X: 300
+        Y: 260
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+  UPTIME:
+    INTERVAL: 5
+    FORMATTED:
+      TEXT:
+        SHOW: True
+        X: 300
+        Y: 237
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 12
+        FONT_COLOR: 180, 180, 255
+        BACKGROUND_IMAGE: background.png

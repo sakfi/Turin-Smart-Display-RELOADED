@@ -1,0 +1,260 @@
+---
+author: "MJP"
+
+display:
+  DISPLAY_SIZE: 3.5"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+
+
+static_text:
+  CPUCLOCK:
+    TEXT: CPU CLOCK
+    X: 10
+    Y: 10
+    FONT: DejaVuSans-Bold.ttf
+    FONT_SIZE: 29
+    FONT_COLOR: 255, 255,255
+    BACKGROUND_IMAGE: background.png
+  CPUTEMP:
+    TEXT: CPU TEMP
+    X: 10
+    Y: 55
+    FONT: DejaVuSans-Bold.ttf
+    FONT_SIZE: 29
+    FONT_COLOR: 255, 255,255
+    BACKGROUND_IMAGE: background.png
+  GPURAM:
+    TEXT: VRAM
+    X: 10
+    Y: 120
+    FONT: DejaVuSans-Bold.ttf
+    FONT_SIZE: 29
+    FONT_COLOR: 255, 255,255
+    BACKGROUND_IMAGE: background.png
+  GPUTEMP:
+    TEXT: GPU TEMP
+    X: 10
+    Y: 170
+    FONT: DejaVuSans-Bold.ttf
+    FONT_SIZE: 29
+    FONT_COLOR: 255, 255,255
+    BACKGROUND_IMAGE: background.png
+  RAMLOAD:
+    TEXT: RAM
+    X: 10
+    Y: 230
+    FONT: DejaVuSans-Bold.ttf
+    FONT_SIZE: 29
+    FONT_COLOR: 255, 255,255
+    BACKGROUND_IMAGE: background.png
+  DISKLOAD:
+    TEXT: DISK
+    X: 250
+    Y: 230
+    FONT: DejaVuSans-Bold.ttf
+    FONT_SIZE: 29
+    FONT_COLOR: 255, 255,255
+    BACKGROUND_IMAGE: background.png
+
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 5
+      RADIAL:
+        SHOW: True
+        X: 400
+        Y: 55
+        RADIUS: 45
+        WIDTH: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 90
+        ANGLE_END: 90
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 255,255,255
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255,255,255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 180
+        Y: 55
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255,255,255
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 10
+        Y: 87
+        WIDTH: 300
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 255, 255
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 55,55,55
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 10
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255,255,255
+        BACKGROUND_IMAGE: background.png
+
+
+  GPU:
+    INTERVAL: 5
+    PERCENTAGE:
+      RADIAL:
+        SHOW: True
+        X: 400
+        Y: 165
+        RADIUS: 45
+        WIDTH: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 90
+        ANGLE_END: 90
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 255,255,255
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255,255,255
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 120
+        Y: 120
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 180
+        Y: 170
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255,255,255
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 10
+        Y: 200
+        WIDTH: 300
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 255, 255
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      USED:
+        TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 90
+        Y: 230
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ANCHOR: lt
+      GRAPH:
+        SHOW: True
+        X: 10
+        Y: 255
+        WIDTH: 218
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 255, 255
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+
+
+  DISK:
+    INTERVAL: 5
+    USED:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 335
+        Y: 230
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255,255,255
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 250
+        Y: 255
+        WIDTH: 200
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255,255,255
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+
+
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        SHOW: True
+        X: 10
+        Y: 280
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        WIDTH: 200
+        ANCHOR: lt
+    HOUR:
+      TEXT:
+        SHOW: True
+        X: 250
+        Y: 280
+        FONT: DejaVuSans-Bold.ttf
+        FONT_SIZE: 29
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        WIDTH: 220
+        ANCHOR: lt

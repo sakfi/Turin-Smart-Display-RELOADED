@@ -1,0 +1,1273 @@
+
+---
+author: "arch3rPro"
+
+display:
+  DISPLAY_SIZE: 5"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 26, 27, 30
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 800
+    HEIGHT: 480
+
+static_text:
+  CPU_MODEL:
+   TEXT: E5-2697v4
+   X: 190
+   Y: 65
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 32
+   FONT_COLOR: 236, 102, 102
+   # BACKGROUND_COLOR: 255, 255, 255
+   BACKGROUND_IMAGE: background.png
+  GPU_MODEL:
+   TEXT: RX580-2304
+   X: 580
+   Y: 65
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 32
+   FONT_COLOR: 20, 122, 214
+   # BACKGROUND_COLOR: 255, 255, 255
+   BACKGROUND_IMAGE: background.png
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT: 
+        SHOW: True
+        SHOW_UNIT: 
+        X: 55
+        Y: 190
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 32
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      GRAPH:
+        SHOW: False
+        X: 210
+        Y: 80
+        WIDTH: 178
+        HEIGHT: 14
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 236, 102, 102
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 18, 17, 20
+        # BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 92
+        Y: 182
+        RADIUS: 70
+        WIDTH: 19
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 270
+        ANGLE_END: 100
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 236, 102, 102
+        SHOW_TEXT: False
+        SHOW_UNIT: False
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 48
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 10
+        AUTOSCALE: False
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      # In seconds. Longer intervals cause this to refresh more slowly.
+      # Setting to lower values will display near real time data,
+      # but may cause significant CPU usage or the display not to update properly
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 290
+        Y: 140
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 50, 50, 50
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      GRAPH:
+        SHOW: True
+        X: 226
+        Y: 120
+        WIDTH: 132
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 5
+        BAR_COLOR: 236, 102, 102
+        BAR_OUTLINE: False
+        #BACKGROUND_COLOR: 18, 17, 20
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 100
+        Y: 110
+        RADIUS: 40
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 10
+        AUTOSCALE: False
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    LOAD:
+      # In seconds. Longer intervals cause this to refresh more slowly.
+      # Setting to lower values will display near real time data,
+      # but may cause significant CPU usage or the display not to update properly
+      INTERVAL: 5
+      ONE:
+        TEXT:
+          SHOW: False
+          SHOW_UNIT: True
+          X: 110
+          Y: 106
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 13
+          FONT_COLOR: 200, 200, 200
+          # BACKGROUND_COLOR: 50, 50, 50
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      FIVE:
+        TEXT:
+          SHOW: False
+          SHOW_UNIT: True
+          X: 183
+          Y: 106
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 13
+          FONT_COLOR: 200, 200, 200
+          # BACKGROUND_COLOR: 50, 50, 50
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      FIFTEEN:
+        TEXT:
+          SHOW: False
+          SHOW_UNIT: True
+          X: 265
+          Y: 106
+          FONT: roboto-mono/RobotoMono-Bold.ttf
+          FONT_SIZE: 13
+          FONT_COLOR: 200, 200, 200
+          # BACKGROUND_COLOR: 50, 50, 50
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 315
+        Y: 185
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      GRAPH:
+        SHOW: True
+        X: 226
+        Y: 166
+        WIDTH: 132
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 236, 102, 102
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 18, 17, 20
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 100
+        Y: 110
+        RADIUS: 40
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 30
+        MAX_VALUE: 120
+        HISTORY_SIZE: 10
+        AUTOSCALE: True
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    FAN_SPEED:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 322
+        Y: 225
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      GRAPH:
+        SHOW: True
+        X: 226
+        Y: 211
+        WIDTH: 132
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 236, 102, 102
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 18, 17, 20
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 100
+        Y: 110
+        RADIUS: 40
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      GRAPH:
+        SHOW: False
+        X: 115
+        Y: 197
+        WIDTH: 178
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 506
+        Y: 181
+        RADIUS: 70
+        WIDTH: 19
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 270
+        ANGLE_END: 100
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 20, 122, 214
+        SHOW_TEXT: False
+        SHOW_UNIT: False
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 48
+        FONT_COLOR: 55, 255, 255
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 470
+        Y: 190
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 32
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 10
+        AUTOSCALE: False
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    MEMORY_PERCENT:
+      GRAPH:
+        SHOW: False
+        X: 115
+        Y: 215
+        WIDTH: 178
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 141
+        Y: 275
+        RADIUS: 28
+        WIDTH: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 110
+        ANGLE_END: 70
+        ANGLE_STEPS: 1
+        ANGLE_SEP: 25
+        CLOCKWISE: True
+        BAR_COLOR: 255, 0, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: True
+        X: 204
+        Y: 195
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 10
+        AUTOSCALE: False
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    MEMORY_USED:
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: True
+        X: 204
+        Y: 195
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 705
+        Y: 185
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      GRAPH:
+        SHOW: True
+        X: 615
+        Y: 166
+        WIDTH: 132
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 20, 122, 214
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 18, 17, 20
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 100
+        Y: 110
+        RADIUS: 40
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 30
+        MAX_VALUE: 120
+        HISTORY_SIZE: 10
+        AUTOSCALE: True
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    FPS:
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: True
+        X: 154
+        Y: 13
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      GRAPH:
+        SHOW: False
+        X: 115
+        Y: 71
+        WIDTH: 178
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 100
+        Y: 110
+        RADIUS: 40
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 0
+        MAX_VALUE: 300
+        HISTORY_SIZE: 10
+        AUTOSCALE: True
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    FAN_SPEED:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 710
+        Y: 225
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      GRAPH:
+        SHOW: True
+        X: 615
+        Y: 210
+        WIDTH: 132
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 20, 122, 214
+        BAR_OUTLINE: 
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 100
+        Y: 110
+        RADIUS: 40
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 0
+        MAX_VALUE: 3000
+        HISTORY_SIZE: 10
+        AUTOSCALE: True
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 690
+        Y: 140
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 50, 50, 50
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      GRAPH:
+        SHOW: True
+        X: 615
+        Y: 120
+        WIDTH: 132
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 5
+        BAR_COLOR: 20, 122, 214
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 18, 17, 20
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 100
+        Y: 110
+        RADIUS: 40
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 120
+        ANGLE_END: 60
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 5
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 10
+        AUTOSCALE: False
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 5
+    SWAP:
+      GRAPH:
+        SHOW: False
+        X: 115
+        Y: 285
+        WIDTH: 178
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 141
+        Y: 275
+        RADIUS: 28
+        WIDTH: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 110
+        ANGLE_END: 70
+        ANGLE_STEPS: 1
+        ANGLE_SEP: 25
+        CLOCKWISE: True
+        BAR_COLOR: 255, 0, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 30
+        MAX_VALUE: 120
+        HISTORY_SIZE: 10
+        AUTOSCALE: True
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    VIRTUAL:
+      GRAPH:
+        SHOW: False
+        X: 115
+        Y: 303
+        WIDTH: 178
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: True
+        X: 86
+        Y: 380
+        RADIUS: 45
+        WIDTH: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 270
+        ANGLE_END: 100
+        ANGLE_STEPS: 15
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 121, 210, 222
+        SHOW_TEXT: False
+        SHOW_UNIT: False
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 48
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 30
+        MAX_VALUE: 120
+        HISTORY_SIZE: 10
+        AUTOSCALE: True
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      USED:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 210
+        Y: 370
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 132, 72
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      FREE:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 210
+        Y: 415
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 9, 128, 109
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      TOTAL:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 210
+        Y: 330
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 121, 210, 222
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 62
+        Y: 390
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  DISK:
+    INTERVAL: 10
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 295
+        Y: 320
+        WIDTH: 180
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 162, 118, 255
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 74, 81, 101
+        # BACKGROUND_IMAGE: background.png
+      RADIAL:
+        SHOW: False
+        X: 141
+        Y: 275
+        RADIUS: 28
+        WIDTH: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 110
+        ANGLE_END: 70
+        ANGLE_STEPS: 1
+        ANGLE_SEP: 25
+        CLOCKWISE: True
+        BAR_COLOR: 255, 0, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 300
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 70
+        MIN_VALUE: 30
+        MAX_VALUE: 120
+        HISTORY_SIZE: 10
+        AUTOSCALE: True
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 2
+        AXIS: True
+        AXIS_COLOR: 255, 135, 0
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 280
+        Y: 338
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 132, 72
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      PERCENT_TEXT:
+        SHOW: False
+        SHOW_UNIT: True
+        X: 46
+        Y: 402
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 23
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    TOTAL:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 400
+        Y: 295
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 121, 210, 222
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    FREE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 420
+        Y: 338
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 9, 128, 109
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  NET:
+    INTERVAL: 1
+    WLO:
+      UPLOAD:
+        TEXT:
+          SHOW: False
+          X: 360
+          Y: 400
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          # WIDTH: 200   # Uncomment to force a static width
+          # HEIGHT: 50   # Uncomment to force static height
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 16
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+        LINE_GRAPH:
+          SHOW: False
+          X: 300
+          Y: 220
+          WIDTH: 133
+          HEIGHT: 70
+          MIN_VALUE: 30
+          MAX_VALUE: 120
+          HISTORY_SIZE: 10
+          AUTOSCALE: True
+          LINE_COLOR: 61, 184, 225
+          LINE_WIDTH: 2
+          AXIS: True
+          AXIS_COLOR: 255, 135, 0
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background.png
+      UPLOADED:
+        TEXT:
+          SHOW: FALSE
+          X: 90
+          Y: 311
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          # WIDTH: 200   # Uncomment to force a static width
+          # HEIGHT: 50   # Uncomment to force static height
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 23
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      DOWNLOAD:
+        TEXT:
+          SHOW: False
+          X: 360
+          Y: 428
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          # WIDTH: 200   # Uncomment to force a static width
+          # HEIGHT: 50   # Uncomment to force static height
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 16
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+        LINE_GRAPH:
+          SHOW: False
+          X: 300
+          Y: 220
+          WIDTH: 133
+          HEIGHT: 70
+          MIN_VALUE: 30
+          MAX_VALUE: 120
+          HISTORY_SIZE: 10
+          AUTOSCALE: True
+          LINE_COLOR: 61, 184, 225
+          LINE_WIDTH: 2
+          AXIS: True
+          AXIS_COLOR: 255, 135, 0
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background.png
+      DOWNLOADED:
+        TEXT:
+          SHOW: FALSE
+          X: 90
+          Y: 261
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          # WIDTH: 200   # Uncomment to force a static width
+          # HEIGHT: 50   # Uncomment to force static height
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 23
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    ETH:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 360
+          Y: 400
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          # WIDTH: 200   # Uncomment to force a static width
+          # HEIGHT: 50   # Uncomment to force static height
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 16
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+        LINE_GRAPH:
+          SHOW: False
+          X: 300
+          Y: 220
+          WIDTH: 133
+          HEIGHT: 70
+          MIN_VALUE: 30
+          MAX_VALUE: 120
+          HISTORY_SIZE: 10
+          AUTOSCALE: True
+          LINE_COLOR: 61, 184, 225
+          LINE_WIDTH: 2
+          AXIS: True
+          AXIS_COLOR: 255, 135, 0
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background.png
+      UPLOADED:
+        TEXT:
+          SHOW: FALSE
+          X: 192
+          Y: 311
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          # WIDTH: 200   # Uncomment to force a static width
+          # HEIGHT: 50   # Uncomment to force static height
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 23
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 360
+          Y: 428
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          # WIDTH: 200   # Uncomment to force a static width
+          # HEIGHT: 50   # Uncomment to force static height
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 16
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+        LINE_GRAPH:
+          SHOW: False
+          X: 300
+          Y: 220
+          WIDTH: 133
+          HEIGHT: 70
+          MIN_VALUE: 30
+          MAX_VALUE: 120
+          HISTORY_SIZE: 10
+          AUTOSCALE: True
+          LINE_COLOR: 61, 184, 225
+          LINE_WIDTH: 2
+          AXIS: True
+          AXIS_COLOR: 255, 135, 0
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background.png
+      DOWNLOADED:
+        TEXT:
+          SHOW: FALSE
+          X: 192
+          Y: 261
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          # WIDTH: 200   # Uncomment to force a static width
+          # HEIGHT: 50   # Uncomment to force static height
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 23
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  DATE:
+    INTERVAL: 1
+    DAY: # Format (Y/M/D ordering, month/day translations...) will match your computer locale
+      TEXT:
+        FORMAT: short # short (2/20/23) / medium (Feb 20, 2023) / long (February 20, 2023) / full (Monday, February 20, 2023) / custom pattern e.g. "yyyy.MM.dd" (2024.02.20)
+        SHOW: True
+        X: 600
+        Y: 410
+        FONT: jetbrains-mono/JetBrainsMono-Thin.ttf
+        FONT_SIZE: 24
+        FONT_COLOR: 0, 181, 120
+        # BACKGROUND_COLOR: 50, 50, 50
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    HOUR: # Format (12/24h, timezone translations) will match your computer locale
+      TEXT:
+        FORMAT: short # short (6:48 PM) / medium (6:48:53 PM) / long (6:48:53 PM UTC) / full (6:48:53 PM Coordinated Universal Time) / custom pattern e.g. "HH:mm:ss zzz" (6:48:53 EDT)
+        SHOW: True
+        X: 560
+        Y: 350
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        # WIDTH: 200   # Uncomment to force a static width
+        # HEIGHT: 50   # Uncomment to force static height
+        FONT: jetbrains-mono/JetBrainsMono-Thin.ttf
+        FONT_SIZE: 44
+        FONT_COLOR: 255, 143, 31
+        # BACKGROUND_COLOR: 50, 50, 50
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html

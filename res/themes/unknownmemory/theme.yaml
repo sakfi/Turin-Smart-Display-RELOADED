@@ -1,0 +1,166 @@
+author: "@enxes"
+
+display:
+  DISPLAY_SIZE: 3.5"
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 255, 255, 255
+
+###
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+
+###
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 65
+        Y: 285
+        FONT: angel-wish/Angel Wish.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center  
+        ANCHOR: lt 
+    TEMPERATURE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 205
+        Y: 285
+        FONT: angel-wish/Angel Wish.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center  
+        ANCHOR: lt   
+
+###
+        
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 65
+        Y: 350
+        FONT: angel-wish/Angel Wish.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center 
+        ANCHOR: lt   
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 205
+        Y: 350
+        FONT: angel-wish/Angel Wish.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  
+        ANCHOR: lt  
+   
+   ###
+   
+  MEMORY:
+    INTERVAL: 1
+    VIRTUAL:
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 65
+        Y: 415
+        FONT: angel-wish/Angel Wish.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  
+        ANCHOR: lt  
+  
+  ###
+  
+  NET:
+    INTERVAL: 1
+    ETH:
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 205
+          Y: 430
+          FONT: angel-wish/Angel Wish.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+          ALIGN: center  
+          ANCHOR: lt   
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 205
+          Y: 412
+          FONT: angel-wish/Angel Wish.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+          ALIGN: center 
+          ANCHOR: lt 
+  
+  ###
+  
+  DATE:
+    INTERVAL: 1
+    DAY: 
+      TEXT:
+        FORMAT: "dd MMMM"      
+        SHOW: True
+        X: 160
+        Y: 190
+        FONT: angel-wish/Angel Wish.ttf
+        FONT_SIZE: 35
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: mm 
+    HOUR: 
+      TEXT:
+        FORMAT: "HH:mm"
+        SHOW: True
+        X: 160
+        Y: 110
+        FONT: angel-wish/Angel Wish.ttf
+        FONT_SIZE: 125
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center 
+        ANCHOR: mm 
+  
+  ###
+  
+  PING:
+    INTERVAL: 10
+    TEXT:
+      SHOW: True
+      SHOW_UNIT: True
+      X: 260
+      Y: 210
+      FONT: angel-wish/Angel Wish.ttf
+      FONT_SIZE: 15
+      FONT_COLOR: 255, 255, 255
+      BACKGROUND_IMAGE: background.png
+      ALIGN: left  
+      ANCHOR: lt   

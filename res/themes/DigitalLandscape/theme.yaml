@@ -1,0 +1,84 @@
+---
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 0
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+STATS:
+  CPU:
+    PERCENTAGE:
+      # In seconds. Longer intervals cause this to refresh more slowly.
+      # Setting to lower values will display near real time data,
+      # but may cause significant CPU usage or the display not to update properly
+      INTERVAL: 1
+      GRAPH:
+        SHOW: True
+        X: 77
+        Y: 241
+        WIDTH: 157
+        HEIGHT: 22
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 248, 195, 34
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 240
+        Y: 115
+        FONT: digital/DIGITAL-7.TTF
+        FONT_SIZE: 170
+        FONT_COLOR: 248, 195, 34
+        BACKGROUND_IMAGE: background.png
+        ANCHOR: rt
+  GPU:
+    PERCENTAGE:
+      # In seconds. Longer intervals cause this to refresh more slowly.
+      # Setting to lower values will display near real time data,
+      # but may cause significant CPU usage or the display not to update properly
+      INTERVAL: 1
+      GRAPH:
+        SHOW: True
+        X: 306
+        Y: 241
+        WIDTH: 157
+        HEIGHT: 22
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 20, 240, 116
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 469
+        Y: 115
+        FONT: digital/DIGITAL-7.TTF
+        FONT_SIZE: 170
+        FONT_COLOR: 20, 240, 116
+        BACKGROUND_IMAGE: background.png
+        ANCHOR: rt
+  DATE:
+    INTERVAL: 1
+    HOUR:
+      TEXT:
+        # Set below to False to remove the clock
+        SHOW: True
+        FORMAT: HH:mm:ss
+        X: 313
+        Y: 22
+        FONT: digital/DIGITAL-7.TTF
+        FONT_SIZE: 40
+        FONT_COLOR: 134, 218, 75
+        BACKGROUND_IMAGE: clock_overlay.png
+        ANCHOR: rm

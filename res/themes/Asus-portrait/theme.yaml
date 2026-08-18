@@ -1,0 +1,248 @@
+---
+author: "@amiltonjr"
+
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 255, 255, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+  CPU_MODEL:
+    TEXT: Intel core i7 12700K
+    X: 15
+    Y: 142
+    FONT: roboto/Roboto-Bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  GPU_MODEL:
+    TEXT: MSI RTX 2060 6g
+    X: 15
+    Y: 231
+    FONT: roboto/Roboto-Bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  RAM_MODEL:
+    TEXT: FURY DDR5 3200 32Gb
+    X: 15
+    Y: 320
+    FONT: roboto/Roboto-Bold.ttf
+    FONT_SIZE: 15
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  DOWNLOAD_RATE:
+    TEXT: DOWNLOAD
+    X: 15
+    Y: 399
+    FONT: roboto/Roboto-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  UPLOAD_RATE:
+    TEXT: UPLOAD
+    X: 15
+    Y: 442
+    FONT: roboto/Roboto-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  DISK_USAGE:
+    TEXT: DISK USAGE
+    X: 15
+    Y: 356
+    FONT: roboto/Roboto-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 94
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 52, 207, 255
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 15
+        Y: 120
+        WIDTH: 160
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 52, 207, 255
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 85
+        Y: 95
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 10
+        Y: 94
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 52, 207, 255
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 5
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 180
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 52, 207, 255
+        BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 15
+        Y: 209
+        WIDTH: 160
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 52, 207, 255
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 85
+        Y: 182
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 10
+        Y: 182
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 52, 207, 255
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 15
+        Y: 297
+        WIDTH: 160
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 52, 207, 255
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+      USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 15
+        Y: 271
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 52, 207, 255
+        BACKGROUND_IMAGE: background.png
+      FREE:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 100
+        Y: 271
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 270
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 52, 207, 255
+        BACKGROUND_IMAGE: background.png
+  DISK:
+    INTERVAL: 10
+    USED:
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 226
+        Y: 353
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 52, 207, 255
+        BACKGROUND_IMAGE: background.png
+  NET:
+    INTERVAL: 2
+    ETH:
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 182
+          Y: 397
+          FONT: roboto/Roboto-Bold.ttf
+          FONT_SIZE: 23
+          FONT_COLOR: 52, 207, 255
+          BACKGROUND_IMAGE: background.png
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 182
+          Y: 440
+          FONT: roboto/Roboto-Bold.ttf
+          FONT_SIZE: 23
+          FONT_COLOR: 52, 207, 255
+          BACKGROUND_IMAGE: background.png
+  DATE:
+    INTERVAL: 1
+    HOUR:
+      TEXT:
+        SHOW: True
+        X: 220
+        Y: 16
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    DAY:
+      TEXT:
+        SHOW: True
+        FORMAT: short
+        X: 190
+        Y: 45
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png

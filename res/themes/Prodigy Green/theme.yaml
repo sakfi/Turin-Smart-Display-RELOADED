@@ -1,0 +1,650 @@
+---
+author: "Agent X"
+
+display:
+  DISPLAY_SIZE: 8.8"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 255, 255, 255
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 1920
+    HEIGHT: 480
+
+static_text:
+# CPU HERE  
+  CPU:
+   TEXT: Intel Core i7-4790K #Change your CPU here.
+   X: 470
+   Y: 25
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 255, 255, 255
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+  CPU_LABEL:
+   TEXT: "CPU"
+   X: 55
+   Y: 25
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+  CPU_TEMP_LABEL:
+   TEXT: "TEMPERATURE"
+   X: 400
+   Y: 135
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt
+  CPU_CLOCK_LABEL:
+   TEXT: "CLOCK"
+   X: 350
+   Y: 210
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt
+  CPU_FAN_LABEL:
+   TEXT: "FAN"
+   X: 335
+   Y: 285
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt  
+
+# GPU HERE  
+  GPU:
+   TEXT: ASUS ROG STRIX GTX 1660 Ti #Change your GPU here.
+   X: 1020
+   Y: 25
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 255, 255, 255
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+  GPU_LABEL:
+   TEXT: "GPU"
+   X: 695
+   Y: 25
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+  GPU_TEMP_LABEL:
+   TEXT: "TEMPERATURE"
+   X: 1040
+   Y: 135
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt
+  GPU_CLOCK_LABEL:
+   TEXT: "CLOCK"
+   X: 990
+   Y: 210
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt
+  GPU_FAN_LABEL:
+   TEXT: "FAN"
+   X: 980
+   Y: 285
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt 
+
+# RAM HERE  
+  RAM:
+   TEXT: Kingston HyperX Fury 16GB #Change your RAM here.
+   X: 1680
+   Y: 25
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 255, 255, 255
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+  RAM_LABEL:
+   TEXT: "RAM"
+   X: 1335
+   Y: 25
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+  RAM_USED_LABEL:
+   TEXT: "USED:"
+   X: 1700
+   Y: 100
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt   
+  RAM_TOTAL_LABEL:
+   TEXT: "TOTAL:"
+   X: 1700
+   Y: 160
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt   
+  RAM_FREE_LABEL:
+   TEXT: "FREE:"
+   X: 1700
+   Y: 220
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt
+
+# STORAGE HERE
+  STORAGE_LABEL:
+   TEXT: "STORAGE"
+   X: 100
+   Y: 375
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+  STORAGE_USED_LABEL:
+   TEXT: "USED"
+   X: 235
+   Y: 410
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt   
+  STORAGE_FREE_LABEL:
+   TEXT: "FREE"
+   X: 405
+   Y: 410
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt   
+  STORAGE_TOTAL_LABEL:
+   TEXT: "TOTAL"
+   X: 575
+   Y: 410
+   FONT: roboto/Roboto-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: left
+   ANCHOR: mt
+
+# FPS HERE 
+  FPS_LABEL:
+   TEXT: "FPS"
+   X: 695
+   Y: 375
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+
+# NETWORK HERE     
+  NETWORK_LABEL:
+   TEXT: "NETWORK"
+   X: 1380
+   Y: 375
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 35
+   FONT_COLOR: 150, 150, 150
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center
+   ANCHOR: mt
+
+STATS:
+# CPU HERE
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      RADIAL:
+        SHOW: True
+        X: 160
+        Y: 180
+        RADIUS: 100
+        WIDTH: 22
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: -90
+        ANGLE_END: 270
+        ANGLE_STEPS: 10
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        BAR_BACKGROUND_COLOR:  0, 0, 0
+        DRAW_BAR_BACKGROUND: True
+        #BAR_DECORATION: Ellipse
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        TEXT_OFFSET: [0, 10]
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: True
+        X: 300
+        Y: 100
+        WIDTH: 300
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 535
+        Y: 135
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: True
+        X: 300
+        Y: 175
+        WIDTH: 300
+        HEIGHT: 25
+        MIN_VALUE: 0.0
+        MAX_VALUE: 6.0
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 495
+        Y: 210
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FAN_SPEED:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: True
+        X: 300
+        Y: 250
+        WIDTH: 300
+        HEIGHT: 25
+        MIN_VALUE: 0.0
+        MAX_VALUE: 100.0
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 545
+        Y: 285
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+# GPU HERE
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      RADIAL:
+        SHOW: True
+        X: 790
+        Y: 180
+        RADIUS: 100
+        WIDTH: 22
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: -90
+        ANGLE_END: 270
+        ANGLE_STEPS: 10
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        BAR_BACKGROUND_COLOR:  0, 0, 0
+        DRAW_BAR_BACKGROUND: True
+        #BAR_DECORATION: Ellipse
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        TEXT_OFFSET: [0, 10]
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: True
+        X: 940
+        Y: 100
+        WIDTH: 300
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1175
+        Y: 135
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: True
+        X: 940
+        Y: 175
+        WIDTH: 300
+        HEIGHT: 25
+        MIN_VALUE: 0.0
+        MAX_VALUE: 6.0
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1135
+        Y: 210
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FAN_SPEED:
+      INTERVAL: 5
+      GRAPH:
+        SHOW: True
+        X: 940
+        Y: 250
+        WIDTH: 300
+        HEIGHT: 25
+        MIN_VALUE: 0.0
+        MAX_VALUE: 100.0
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1185
+        Y: 285
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FPS:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 980
+        Y: 390
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 70
+        FONT_COLOR: 255, 255, 255
+       # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: lt
+      LINE_GRAPH:
+        SHOW: True
+        X: 760
+        Y: 370
+        WIDTH: 220
+        HEIGHT: 90
+        MIN_VALUE: 0
+        MAX_VALUE: 200
+        HISTORY_SIZE: 60
+        AUTOSCALE: True
+        LINE_COLOR: 0, 255, 0
+        AXIS: True
+        AXIS_COLOR: 255, 255, 255
+        AXIS_FONT: roboto/Roboto-Bold.ttf
+        AXIS_FONT_SIZE: 1
+        BACKGROUND_IMAGE: background.png 
+#    MEMORY:
+#      INTERVAL: 5
+#      GRAPH:
+#        SHOW: True
+#        X: 997
+#        Y: 245
+#        WIDTH: 245
+#        HEIGHT: 30
+#        MIN_VALUE: 0
+#        MAX_VALUE: 100
+#        BAR_COLOR: 35, 150, 255
+#        BAR_OUTLINE: True
+#        #BACKGROUND_COLOR: 0, 0, 0
+#        BACKGROUND_IMAGE: background.png
+#      TEXT:
+#        SHOW: True
+#        SHOW_UNIT: True
+#        X: 1123
+#        Y: 220
+#        FONT: roboto/Roboto-Bold.ttf
+#        FONT_SIZE: 30
+#        FONT_COLOR: 255, 255, 255
+#        BACKGROUND_IMAGE: background.png
+           
+# RAM HERE    
+  MEMORY:
+    INTERVAL: 1
+    VIRTUAL:
+     RADIAL:
+        SHOW: True
+        X: 1430
+        Y: 180
+        RADIUS: 100
+        WIDTH: 22
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: -90
+        ANGLE_END: 270
+        ANGLE_STEPS: 10
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 0, 255, 0
+        BAR_BACKGROUND_COLOR:  0, 0, 0
+        DRAW_BAR_BACKGROUND: True
+        #BAR_DECORATION: Ellipse
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: geforce/GeForce-Bold.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 255, 255, 255
+        TEXT_OFFSET: [0, 10]
+        BACKGROUND_IMAGE: background.png
+     TOTAL:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1775
+        Y: 160
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+     USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1775
+        Y: 100
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+     FREE:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 1775
+        Y: 220
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png    
+   
+# STORAGE HERE   
+  DISK:
+    INTERVAL: 25
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 270
+        Y: 370
+        WIDTH: 300
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        X: 180
+        Y: 440
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 132, 154, 125
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        X: 570
+        Y: 370
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TOTAL:
+      TEXT:
+        SHOW: True
+        X: 520
+        Y: 440
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    FREE:
+      TEXT:
+        SHOW: True
+        X: 350
+        Y: 440
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 30
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+
+# NETWORK HERE
+  NET:
+    INTERVAL: 1
+    ETH:
+      UPLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 1500
+          Y: 400
+          WIDTH: 180
+          HEIGHT: 60
+          MIN_VALUE: 0
+          MAX_VALUE: 99999999999
+          HISTORY_SIZE: 60
+          AUTOSCALE: True
+          LINE_COLOR: 0, 255, 0
+          AXIS: True
+          AXIS_COLOR: 255, 255, 255
+          AXIS_FONT: roboto/Roboto-Bold.ttf
+          AXIS_FONT_SIZE: 1
+          BACKGROUND_IMAGE: background.png
+        TEXT:
+          SHOW: True
+          X: 1525
+          Y: 370
+          FONT: roboto/Roboto-Bold.ttf
+          FONT_SIZE: 25
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 1700
+          Y: 400
+          WIDTH: 180
+          HEIGHT: 60
+          MIN_VALUE: 0
+          MAX_VALUE: 99999999999
+          HISTORY_SIZE: 60
+          AUTOSCALE: True
+          LINE_COLOR: 0, 255, 0
+          AXIS: True
+          AXIS_COLOR: 255, 255, 255
+          AXIS_FONT: roboto/Roboto-Bold.ttf
+          AXIS_FONT_SIZE: 1
+          BACKGROUND_IMAGE: background.png
+        TEXT:
+          SHOW: True
+          X: 1725
+          Y: 370
+          FONT: roboto/Roboto-Bold.ttf
+          FONT_SIZE: 25
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png

@@ -1,0 +1,131 @@
+---
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 255
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+static_text:
+  CPU_USAGE_LABEL:
+    TEXT: Usage
+    X: 48
+    Y: 114
+    FONT: fira-code/FiraCode-Bold.ttf
+    FONT_SIZE: 24
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  CPU_TEMP_LABEL:
+    TEXT: Temp
+    X: 212
+    Y: 114
+    FONT: fira-code/FiraCode-Bold.ttf
+    FONT_SIZE: 24
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  HDD_USAGE_LABEL:
+    TEXT: Used
+    X: 368
+    Y: 114
+    FONT: fira-code/FiraCode-Bold.ttf
+    FONT_SIZE: 24
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  GPU_USAGE_LABEL:
+    TEXT: Usage
+    X: 48
+    Y: 274
+    FONT: fira-code/FiraCode-Bold.ttf
+    FONT_SIZE: 24
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  GPU_TEMP_LABEL:
+    TEXT: Temp
+    X: 212
+    Y: 274
+    FONT: fira-code/FiraCode-Bold.ttf
+    FONT_SIZE: 24
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+  RAM_USAGE:
+    TEXT: Usage
+    X: 360
+    Y: 274
+    FONT: fira-code/FiraCode-Bold.ttf
+    FONT_SIZE: 24
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 24
+        Y: 63
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 168
+        Y: 63
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 24
+        Y: 223
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 168
+        Y: 223
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 334
+        Y: 223
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+  DISK:
+    INTERVAL: 10
+    USED:
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 334
+        Y: 63
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png

@@ -1,0 +1,222 @@
+# See the wiki to edit this file: https://github.com/mathoudebine/turing-smart-screen-python/wiki/System-monitor-:-themes
+
+---
+
+author: "Cold Storage"
+
+display:
+  DISPLAY_SIZE: 3.5"
+  DISPLAY_ORIENTATION: portrait
+
+
+static_images:
+  # Specify what static images we want to show on the display
+  # You can create additional records here, the name of the entry must be unique and contain at a minimum the PATH.
+  # Images are drawn in the order they are listed below, the top image will be drawn first (so places images back to front)
+  # IMAGE_NAME:
+  #   PATH:
+  #   X:
+  #   Y:
+  #   WIDTH:
+  #   HEIGHT:
+  BACKGROUND:
+    PATH: black-white5.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+
+STATS:
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        FORMAT: short
+        SHOW: true
+        X: 49
+        Y: 7
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 17
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+    HOUR:
+      TEXT:
+        FORMAT: short
+        SHOW: true
+        X: 141
+        Y: 11
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 38
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+  CPU:
+    INTERVAL: 5
+    FREQUENCY:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 114
+        Y: 91
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+    FAN_SPEED:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 126
+        Y: 114
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+    PERCENTAGE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 126
+        Y: 140
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+      GRAPH:
+        SHOW: true
+        X: 12
+        Y: 165
+        WIDTH: 191
+        HEIGHT: 15
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 255, 255
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: black-white5.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 246
+        Y: 152
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 26
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+  GPU:
+    INTERVAL: 5
+    MEMORY_USED:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 100
+        Y: 212
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+    FAN_SPEED:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 126
+        Y: 235
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+    PERCENTAGE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 126
+        Y: 261
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+      GRAPH:
+        SHOW: true
+        X: 12
+        Y: 285
+        WIDTH: 191
+        HEIGHT: 15
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 255, 255
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: black-white5.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 246
+        Y: 272
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 26
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      USED:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 55
+        Y: 338
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 151
+        Y: 338
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+      GRAPH:
+        SHOW: true
+        X: 12
+        Y: 359
+        WIDTH: 191
+        HEIGHT: 15
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 255, 255
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: black-white5.png
+  DISK:
+    INTERVAL: 20
+    USED:
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 51
+        Y: 411
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: black-white5.png
+  NET:
+    INTERVAL: 5
+    WLO:
+      DOWNLOADED:
+        TEXT:
+          SHOW: true
+          X: 272
+          Y: 414
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 10
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: black-white5.png
+      UPLOADED:
+        TEXT:
+          SHOW: true
+          X: 272
+          Y: 437
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 10
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: black-white5.png

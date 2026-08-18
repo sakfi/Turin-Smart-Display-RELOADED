@@ -1,0 +1,199 @@
+---
+author: "ForkTrueno"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+static_text:
+  TEXT_CPU:
+   TEXT: CPU
+   X: 6
+   Y: 12
+   FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 128, 128, 128
+   BACKGROUND_IMAGE: background.png
+  TEXT_GPU:
+   TEXT: GPU
+   X: 6
+   Y: 120
+   FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 128, 128, 128
+   BACKGROUND_IMAGE: background.png
+  TEXT_RAM:
+   TEXT: RAM
+   X: 6
+   Y: 230
+   FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+   FONT_SIZE: 25
+   FONT_COLOR: 128, 128, 128
+   BACKGROUND_IMAGE: background.png
+  TEXT_RAM/:
+   TEXT: /
+   X: 178
+   Y: 229
+   FONT: jetbrains-mono/JetBrainsMono-Thin.ttf
+   FONT_SIZE: 20
+   FONT_COLOR: 128, 128, 128
+   BACKGROUND_IMAGE: background.png
+  
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 2
+      LINE_GRAPH:
+        SHOW: True
+        X: 6
+        Y: 37
+        WIDTH: 302
+        HEIGHT: 67
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 60
+        AUTOSCALE: false
+        LINE_COLOR: 128, 128, 128
+        AXIS: True
+        AXIS_COLOR: 128, 128, 128
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 95
+        Y: 12
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 128, 128, 128
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 230
+        Y: 12
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 128, 128, 128
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 2
+    MEMORY_USED:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 95
+        Y: 120
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 128, 128, 128
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    PERCENTAGE:
+      LINE_GRAPH:
+        SHOW: true
+        X: 6
+        Y: 145
+        WIDTH: 302
+        HEIGHT: 67
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 60
+        AUTOSCALE: False
+        LINE_COLOR: 128, 128, 128
+        AXIS: True
+        AXIS_COLOR: 128, 128, 128
+        BACKGROUND_IMAGE: background.png
+    MEMORY:
+      GRAPH:
+        SHOW: false
+        X: 100
+        Y: 215
+        WIDTH: 200
+        HEIGHT: 150
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 128, 128, 128
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 0, 0, 0
+    TEMPERATURE:
+      TEXT:
+        SHOW: TRUE
+        SHOW_UNIT: True
+        X: 230
+        Y: 120
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 128, 128, 128
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 10
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 6
+        Y: 255
+        WIDTH: 300
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 128, 128, 128
+        BAR_OUTLINE: true
+        BACKGROUND_COLOR: 0, 0, 0
+      TOTAL:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 195
+        Y: 230
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 128, 128, 128
+        BACKGROUND_IMAGE: background.png 
+      USED:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 99
+        Y: 230
+        FONT: jetbrains-mono/JetBrainsMono-Light.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 128, 128, 128
+        BACKGROUND_IMAGE: background.png 
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        FORMAT: "dd.MM.yyyy"
+        SHOW: True
+        X: 6
+        Y: 295
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 128, 128, 128
+        BACKGROUND_IMAGE: background.png
+        WIDTH: 130
+        ANCHOR: lt
+        ALIGN: left
+    HOUR:
+      TEXT:
+        FORMAT: "HH:mm"
+        SHOW: True
+        X: 340
+        Y: 20
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 128, 128, 128
+        BACKGROUND_IMAGE: background.png
+        WIDTH: 130
+        ANCHOR: lt
+        ALIGN: center

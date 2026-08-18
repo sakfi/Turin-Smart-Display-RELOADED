@@ -1,0 +1,236 @@
+
+---
+
+author: "@seythegamer"
+
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 0, 0
+static_images:
+  BACKGROUND:
+    PATH: background_manager.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 4
+      LINE_GRAPH:
+        SHOW: True
+        X: 30
+        Y: 88
+        WIDTH: 115
+        HEIGHT: 53
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: True
+        LINE_COLOR: 61, 184, 225
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 215
+        Y: 120
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+    TEMPERATURE:
+      INTERVAL: 4
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 145
+        Y: 120
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+
+
+
+  GPU:
+    INTERVAL: 4
+    PERCENTAGE:
+      LINE_GRAPH:
+        SHOW: True
+        X: 30
+        Y: 163
+        WIDTH: 115
+        HEIGHT: 53
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 130, 50, 160
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 215
+        Y: 195
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+    TEMPERATURE:
+      INTERVAL: 4
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 145
+        Y: 195
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+ 
+  MEMORY:
+    INTERVAL: 4
+    VIRTUAL:
+      LINE_GRAPH:
+        SHOW: True
+        X: 30
+        Y: 235
+        WIDTH: 115
+        HEIGHT: 53
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 90, 90, 160
+        LINE_WIDTH: 3
+        AXIS: False
+        AXIS_COLOR: 170, 170, 170
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+
+      USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 156
+        Y: 270
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 250
+        Y: 270
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+
+
+  NET:
+    INTERVAL: 3
+    WLO:
+      UPLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 30
+          Y: 342
+          WIDTH: 115
+          HEIGHT: 23
+          MIN_VALUE: 0
+          MAX_VALUE: 9000000
+          HISTORY_SIZE: 50
+          AUTOSCALE: False
+          LINE_COLOR: 250, 30, 0
+          LINE_WIDTH: 3
+          AXIS: False
+          AXIS_COLOR: 250, 30, 0
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background_manager.png
+        TEXT:
+          SHOW: True
+          SHOW_UNIT: True
+          X: 200
+          
+          Y: 363
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 175, 175, 175
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background_manager.png
+          ALIGN: center  # left / center / right
+          ANCHOR: ms   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      DOWNLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 30
+          Y: 315
+          WIDTH: 115
+          HEIGHT: 22
+          MIN_VALUE: 0
+          MAX_VALUE: 90000000
+          HISTORY_SIZE: 50
+          AUTOSCALE: False
+          LINE_COLOR: 0, 200, 0
+          LINE_WIDTH: 3
+          AXIS: False
+          AXIS_COLOR: 170, 170, 170
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background_manager.png
+        TEXT:
+          SHOW: True
+          SHOW_UNIT: True
+          X: 200
+          Y: 347
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 15
+          FONT_COLOR: 175, 175, 175
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background_manager.png
+          ALIGN: center  # left / center / right
+          ANCHOR: ms   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  DISK:
+    INTERVAL: 600
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 30
+        Y: 389
+        WIDTH: 117
+        HEIGHT: 51
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 130, 130, 130
+        BAR_OUTLINE: False
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 170
+        
+        Y: 435
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 175, 175, 175
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_manager.png
+        ALIGN: center  # left / center / right
+        ANCHOR: ms   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+

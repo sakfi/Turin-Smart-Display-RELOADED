@@ -1,0 +1,250 @@
+author: "@hicwic"
+
+display:
+  # Specify the display size in inch for this theme: 3.5" (default) or 5"
+  DISPLAY_SIZE: 3.5"
+
+  # Specify the display orientation for this theme: portrait or landscape (reverse orientation is managed in config.yaml)
+  DISPLAY_ORIENTATION: landscape
+
+  # Backplate RGB LED color (for HW revision 'flagship' devices only), set one that match your theme dominant color
+  DISPLAY_RGB_LED: 255, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      RADIAL:
+        SHOW: True
+        X: 45
+        Y: 79
+        RADIUS: 34
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 60
+        ANGLE_END: 420
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 139,37,0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 248, 177, 51
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 39
+        Y: 120
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+    FAN_SPEED:
+      INTERVAL: 5
+      RADIAL:
+        SHOW: True
+        X: 108
+        Y: 70
+        RADIUS: 26
+        WIDTH: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 225
+        ANGLE_END: 220
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 255,128,0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 255,64,64
+        BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      RADIAL:
+        SHOW: True
+        X: 35
+        Y: 225
+        RADIUS: 25
+        WIDTH: 11
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 60
+        ANGLE_END: 420
+        ANGLE_STEPS: 1
+        ANGLE_SEP: 25
+        CLOCKWISE: True
+        BAR_COLOR: 139,37,0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 13
+        FONT_COLOR: 248, 177, 51
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      RADIAL:
+        SHOW: True
+        X: 200
+        Y: 79
+        RADIUS: 34
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 60
+        ANGLE_END: 420
+        ANGLE_STEPS: 50
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 139,37,0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 248, 177, 51
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    MEMORY_PERCENT:
+      GRAPH:
+        SHOW: True
+        X: 95
+        Y: 220
+        WIDTH: 102
+        HEIGHT: 8
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 139,37,0
+        BAR_OUTLINE: False
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 55
+        Y: 217
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 248, 177, 51
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 195
+        Y: 120
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 100, 100, 100
+        BACKGROUND_IMAGE: background.png
+    FAN_SPEED:
+      RADIAL:
+        SHOW: True
+        X: 269
+        Y: 70
+        RADIUS: 26
+        WIDTH: 5
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 225
+        ANGLE_END: 220
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 255,128,0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 255,64,64
+        BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+   # FPS:
+      #TEXT:
+       # SHOW: True
+       # SHOW_UNIT: False
+       # X: 190
+       # Y: 215
+       # MIN_SIZE: 4
+       # FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+       # FONT_SIZE: 27
+       # FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 100, 100, 100
+       # BACKGROUND_IMAGE: background.png
+     
+  NET:
+    INTERVAL: 1
+    ETH:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 100
+          Y: 302
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 10
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 15
+          Y: 302
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 10
+          FONT_COLOR: 255, 255, 255
+          # BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png     
+    STATS:
+  DATE:
+    # For time display, it is recommended not to change the interval: keep to 1
+    INTERVAL: 1
+    DAY: # Format (Y/M/D ordering, month/day translations...) will match your computer locale
+      TEXT:
+        FORMAT: short # short (2/20/23) / medium (Feb 20, 2023) / long (February 20, 2023) / full (Monday, February 20, 2023)
+        SHOW: True
+        X: 200
+        Y: 250
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        WIDTH: 200
+        ANCHOR: lt
+    HOUR:
+      TEXT:
+        FORMAT: short 
+        SHOW: True
+        X: 187
+        Y: 210
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 50, 0, 0
+        BACKGROUND_IMAGE: background.png
+        WIDTH: 200
+        ANCHOR: lt

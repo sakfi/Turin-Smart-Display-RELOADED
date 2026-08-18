@@ -1,0 +1,64 @@
+---
+author: "@Dabaobao"
+
+display:
+  DISPLAY_SIZE: 3.5"
+  DISPLAY_ORIENTATION: portrait
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+    CPU_TEXT:
+        TEXT: "CPU |"
+        X: 40
+        Y: 70
+        FONT: Roboto-mono/RobotoMono-Thin.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: lt
+
+    GPU_TEXT:
+        TEXT: "GPU |"
+        X: 40
+        Y: 140
+        FONT: Roboto-mono/RobotoMono-Thin.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: lt
+    
+STATS:
+    CPU:
+        TEMPERATURE:
+            INTERVAL: 1
+            TEXT:
+                SHOW: True
+                SHOW_UNIT: True
+                X: 150
+                Y: 70
+                FONT: Roboto-mono/RobotoMono-Thin.ttf
+                FONT_SIZE: 40
+                FONT_COLOR: 255, 255, 255
+                BACKGROUND_IMAGE: background.png
+    GPU:
+        INTERVAL: 1
+        TEMPERATURE:
+          TEXT:
+            SHOW: TRUE
+            SHOW_UNIT: True
+            X: 150
+            Y: 140
+            FONT: Roboto-mono/RobotoMono-Thin.ttf
+            FONT_SIZE: 40
+            FONT_COLOR: 255, 255, 255
+            BACKGROUND_IMAGE: background.png
+
+

@@ -1,0 +1,281 @@
+---
+display:
+  # Specify the display orientation for this theme: portrait or landscape
+  DISPLAY_ORIENTATION: landscape
+
+  # Backplate RGB LED color (for HW revision 'flagship' devices only)
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  # Specify what static images we want to show on the display
+  # You can create additional records here, the name of the entry must be unique and contain at a minimum the PATH.
+  # Images are drawn in the order they are listed below, the top image will be drawn first (so places images back to front)
+  # IMAGE_NAME:
+  #   PATH:
+  #   X:
+  #   Y:
+  #   WIDTH:
+  #   HEIGHT:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+  
+STATS:
+  CPU:
+    PERCENTAGE:
+      # In seconds. Longer intervals cause this to refresh more slowly.
+      # Setting to lower values will display near real time data,
+      # but may cause significant CPU usage or the display not to update properly
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 15
+        Y: 102
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_COLOR: 0, 0, 0
+        #BACKGROUND_IMAGE: background.png
+      GRAPH:
+        SHOW: True
+        X: 15
+        Y: 80
+        WIDTH: 150
+        HEIGHT: 20
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+        # BACKGROUND_IMAGE: background.png
+    
+    
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 15
+        Y: 40
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    # In seconds. Longer intervals cause this to refresh more slowly.
+    # Setting to lower values will display near real time data,
+    # but may cause significant CPU usage or the display not to update properly
+    INTERVAL: 1
+    PERCENTAGE:
+      GRAPH:
+        SHOW: True
+        X: 300
+        Y: 80
+        WIDTH: 150
+        HEIGHT: 20
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 255, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+        # BACKGROUND_IMAGE: background.png
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 300
+        Y: 102
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_COLOR: 0, 0, 0
+        #BACKGROUND_IMAGE: background.png
+    MEMORY:
+      RADIAL:
+        SHOW: True
+        X: 292
+        Y: 251
+        RADIUS: 40
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 320
+        ANGLE_END: 320
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: False
+        BAR_COLOR: 62, 255, 180
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+      
+      
+      
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 300
+        Y: 40
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 40
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    # In seconds. Longer intervals cause this to refresh more slowly.
+    # Setting to lower values will display near real time data,
+    # but may cause significant CPU usage or the display not to update properly
+    INTERVAL: 5
+    VIRTUAL:
+      RADIAL:
+        SHOW: True
+        X: 182
+        Y: 251
+        RADIUS: 40
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 320
+        ANGLE_END: 320
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: False
+        BAR_COLOR: 62, 255, 180
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+        
+     
+
+  
+  CUSTOM:
+    INTERVAL: 1
+
+    GpuNvidia:
+       TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 370
+        Y: 102
+        MIN_SIZE: 4
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_COLOR: 0, 0, 0
+        #BACKGROUND_IMAGE: background.png
+
+    
+
+
+    GpuNvidiaFanPercent:
+       RADIAL:
+        SHOW: True
+        X: 411
+        Y: 187
+        RADIUS: 50
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 320
+        ANGLE_END: 320
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: False
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+    CpuFanPercent:
+       RADIAL:
+        SHOW: True
+        X: 67
+        Y: 180
+        RADIUS: 50
+        WIDTH: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 320
+        ANGLE_END: 320
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: False
+        BAR_COLOR: 0, 255, 0
+        SHOW_TEXT: True
+        SHOW_UNIT: True
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255 
+        #BACKGROUND_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+
+      
+
+    RTSSFps:
+      TEXT:
+        SHOW: True
+        X: 200
+        Y: 163
+        MIN_SIZE: 3
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 35
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 100, 100, 100
+        BACKGROUND_IMAGE: background.png   
+                
+    
+
+    CpuPower:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 100
+        Y: 102
+        MIN_SIZE: 4
+        FONT: Rockwell-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 0, 255, 0
+        BACKGROUND_COLOR: 0, 0, 0
+        #BACKGROUND_IMAGE: background.png
+
+    CpuFanrpm:
+      TEXT:
+        SHOW: True
+        X: 25
+        Y: 285
+        MIN_SIZE: 7
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 100, 100, 100
+        BACKGROUND_IMAGE: background.png   
+    GpuNvidiarpm:
+      TEXT:
+        SHOW: True
+        X: 385
+        Y: 285
+        MIN_SIZE: 7
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 100, 100, 100
+        BACKGROUND_IMAGE: background.png   
+
+
+        

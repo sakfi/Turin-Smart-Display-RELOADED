@@ -1,0 +1,372 @@
+---
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+static_text:
+  # --- ЛІВА КОЛОНКА (X=10 - Відступ) ---
+  MoboCPU:
+    TEXT: Intel - 9900K
+    X: 50
+    Y: 5
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  CPUTemp:
+    TEXT: Температура ЦП
+    X: 50
+    Y: 25
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  RAMData:
+    TEXT: Всього ОЗП
+    X: 50
+    Y: 130
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  RAMUsedText:
+    TEXT: Використання
+    X: 50
+    Y: 170
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  Network:
+    TEXT: "Інтернет"
+    X: 50
+    Y: 260
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  UpArrow:
+    TEXT: "\u2191"
+    X: 55
+    Y: 283
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  DownArrow:
+    TEXT: "\u2193"
+    X: 55
+    Y: 303
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  # --- ПРАВА КОЛОНКА (X=250) ---
+  GPU:
+    TEXT: "MSI RTX 4060Ti"
+    X: 270
+    Y: 5
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  GPUTemp:
+    TEXT: "Температура ГП"
+    X: 270
+    Y: 25
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  vRAMData:
+    TEXT: Всього ОЗП ГП
+    X: 270
+    Y: 130
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  vRAMUsedText:
+    TEXT: Використання
+    X: 270
+    Y: 170
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+  # --- SSD (КОЛІР ВИПРАВЛЕНО, ЗСУНУТО) ---
+  SSD:
+    TEXT: "SSD"
+    X: 200
+    Y: 260
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_COLOR: 0, 0, 0
+
+STATS:
+  # --- ЦП (КОЛОНКА 1 - X=10) ---
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 50
+        Y: 102
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0
+      GRAPH:
+        SHOW: True
+        X: 50
+        Y: 80
+        WIDTH: 150
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+
+    FREQUENCY:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 110
+        Y: 102
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0
+
+    TEMPERATURE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 50
+        Y: 45
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 35
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0
+
+  # --- ГП (КОЛОНКА 2 - X=250) ---
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      GRAPH:
+        SHOW: True
+        X: 270
+        Y: 80
+        WIDTH: 150
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 270
+        Y: 102
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0
+
+    FREQUENCY:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 330
+        Y: 102
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0
+
+    # --- ВРАМ ---
+    MEMORY_PERCENT:
+      GRAPH:
+        SHOW: True
+        X: 270
+        Y: 210
+        WIDTH: 150
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+      TEXT:
+        SHOW: True
+        X: 270
+        Y: 232
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0
+        SHOW_UNIT: True
+
+    MEMORY_USED:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 270
+        Y: 190
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_IMAGE: background.png
+
+    MEMORY_TOTAL:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 270
+        Y: 150
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_IMAGE: background.png
+
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 270
+        Y: 45
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 35
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_IMAGE: background.png
+
+  # --- ОЗП (КОЛОНКА 1 - X=10) ---
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 50
+        Y: 210
+        WIDTH: 150
+        HEIGHT: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+      USED:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 50
+        Y: 190
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0
+      TOTAL:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 50
+        Y: 150
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 50
+        Y: 232
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_IMAGE: background.png
+
+  # --- SSD (НИЖНІЙ БЛОК - X=205) ---
+  DISK:
+    INTERVAL: 100
+    USED:
+      GRAPH:
+        SHOW: True
+        X: 200
+        Y: 282
+        WIDTH: 80
+        HEIGHT: 20
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: True
+        BACKGROUND_COLOR: 0, 0, 0
+
+  # --- МЕРЕЖА (НИЖНІЙ БЛОК - X=10) ---
+  NET:
+    INTERVAL: 1
+    ETH:
+      UPLOAD:
+        TEXT:
+          SHOW: True
+          X: 65
+          Y: 283
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 18
+          FONT_COLOR: 255, 0, 0
+          BACKGROUND_IMAGE: background.png
+
+      DOWNLOAD:
+        TEXT:
+          SHOW: True
+          X: 65
+          Y: 303
+          FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+          FONT_SIZE: 18
+          FONT_COLOR: 255, 0, 0
+          BACKGROUND_IMAGE: background.png
+
+  # --- ДАТА/ЧАС (ЗСУНУТО) ---
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        SHOW: True
+        X: 295
+        Y: 295
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_IMAGE: background.png
+    HOUR:
+      TEXT:
+        SHOW: True
+        X: 325
+        Y: 260
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 255, 0, 0
+        BACKGROUND_COLOR: 0, 0, 0

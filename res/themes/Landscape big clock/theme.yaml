@@ -1,0 +1,35 @@
+---
+author: "@edgarallanpauvre"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 66, 207, 239
+
+static_images:
+  BACKGROUND:
+    PATH: background.jpg
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+STATS:
+  DATE:
+    INTERVAL: 1
+    HOURH:
+      TEXT:
+        SHOW: True
+        X: 15
+        Y: 30
+        FONT: reddit-mono/RedditMono-Black.ttf
+        FONT_SIZE: 170
+        FONT_COLOR: 171, 34, 67
+        BACKGROUND_IMAGE: background.jpg
+    HOURM:
+      TEXT:
+        SHOW: True
+        X: 15
+        Y: 165
+        FONT: reddit-mono/RedditMono-Black.ttf
+        FONT_SIZE: 170
+        FONT_COLOR: 171, 34, 67
+        BACKGROUND_IMAGE: background.jpg   

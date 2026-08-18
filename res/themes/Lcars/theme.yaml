@@ -1,0 +1,215 @@
+---
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 0, 0
+static_images:
+  BACKGROUND:
+    PATH: background_lcars.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+  CPU_LOAD:
+    TEXT: CPU LOAD
+    X: 120
+    Y: 70
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_lcars.png
+  GPU_LOAD:
+    TEXT: GPU LOAD
+    X: 265
+    Y: 70
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_lcars.png
+  CPU_TEMP:
+    TEXT: CPU TEMP
+    X: 120
+    Y: 226
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_lcars.png
+  GPU_TEMP:
+    TEXT: GPU TEMP
+    X: 265
+    Y: 226
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_lcars.png    
+  RAM_STATS:
+    TEXT: RAM STATS
+    X: 265
+    Y: 380
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 0, 0, 0
+    BACKGROUND_IMAGE: background_lcars.png   
+  MEM_USED:
+    TEXT: USED
+    X: 175
+    Y: 386
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_IMAGE: background_lcars.png
+  MEM_FREE:
+    TEXT: FREE
+    X: 175
+    Y: 413
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 0, 255, 0
+    BACKGROUND_IMAGE: background_lcars.png   
+  VIDEO_RAM:
+    TEXT: VRAM
+    X: 210
+    Y: 330
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_IMAGE: background_lcars.png      
+  CPU_FREQ:
+    TEXT: FREQ
+    X: 65
+    Y: 330
+    FONT: lcars/lcars.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_IMAGE: background_lcars.png     
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 20
+        Y: 113
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 55
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_lcars.png
+      GRAPH:
+        SHOW: true
+        X: 43
+        Y: 180
+        WIDTH: 120
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background_lcars.png
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 20
+        Y: 268
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 55
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_lcars.png
+    FREQUENCY:
+      INTERVAL: 2
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 100
+        Y: 330
+        FONT: lcars/lcars.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_lcars.png
+  GPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 166
+        Y: 113
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 55
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_lcars.png
+      GRAPH:
+        SHOW: true
+        X: 188
+        Y: 180
+        WIDTH: 120
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 0, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background_lcars.png 
+    TEMPERATURE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 165
+        Y: 268
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 55
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_lcars.png
+    MEMORY:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 245
+        Y: 330
+        FONT: lcars/lcars.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_lcars.png    
+  MEMORY:
+    INTERVAL: 2
+    VIRTUAL:
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 20
+        Y: 388
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 50
+        FONT_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background_lcars.png
+      GRAPH:
+        SHOW: false
+        X: 20
+        Y: 450
+        WIDTH: 120
+        HEIGHT: 13
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 0, 0
+        BAR_OUTLINE: false
+        BACKGROUND_IMAGE: background_lcars.png
+      USED:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 200
+        Y: 386
+        FONT: lcars/lcars.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background_lcars.png
+      FREE:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 200
+        Y: 413
+        FONT: lcars/lcars.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background_lcars.png
