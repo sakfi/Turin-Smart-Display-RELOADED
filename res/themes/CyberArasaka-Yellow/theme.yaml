@@ -1,0 +1,531 @@
+# This file is a sample theme that contains every possible data to be displayed on screen
+# It can be used to start the development of a new theme: it should be copied to a sub-folder with its PNG resources
+# See the wiki to edit this file: https://github.com/mathoudebine/turing-smart-screen-python/wiki/System-monitor-:-themes
+
+# NOTE: Every HW sensor is hidden in this example, to show a sensor change 'SHOW: False' to 'SHOW: True'
+---
+# If you indicate @ with your GitHub username, there will be a hyperlink to your GitHub profile in the Config. Wizard
+# Otherwise, you can just indicate any text e.g. author: "Your Name"
+# You can also remove the line if you don't want to be credited
+author: "@ds0tr0"
+
+display:
+  # Specify the display size in inch for this theme: 2.1", 3.5", 5" or 8.8". The width/height will be set automatically.
+  DISPLAY_SIZE: 3.5"
+
+  # Specify the display orientation for this theme: portrait or landscape (reverse orientation is managed in config.yaml)
+  DISPLAY_ORIENTATION: portrait
+
+  # Backplate RGB LED color (for HW revision 'flagship' devices only), set one that match your theme dominant color
+  DISPLAY_RGB_LED: 255, 255, 255
+
+static_images:
+  # Specify what static images we want to show on the display
+  # You can create additional records here, the name of the entry must be unique and contain at a minimum the PATH.
+  # Images are drawn in the order they are listed below, the top image will be drawn first (so places images back to front)
+  # IMAGE_NAME:
+  #   PATH:
+  #   X:
+  #   Y:
+  #   WIDTH:
+  #   HEIGHT:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+static_text:
+  TEXT_CPU:
+   TEXT: RYZEN
+   X: 14
+   Y: 121
+   WIDTH: 156   # Uncomment to force a static width
+   HEIGHT: 16   # Uncomment to force static height
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 15
+   FONT_COLOR: 255, 255, 255
+   #BACKGROUND_COLOR: 255, 255, 255
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mm
+  TEXT_CPU2:
+   TEXT: 5800 X3D
+   X: 14
+   Y: 137
+   WIDTH: 155   # Uncomment to force a static width
+   HEIGHT: 16   # Uncomment to force static height
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 15
+   FONT_COLOR: 255, 255, 255
+   #BACKGROUND_COLOR: 0, 0, 0
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mm
+  TEXT_GPU:
+   TEXT: RADEON
+   X: 14
+   Y: 239
+   WIDTH: 156   # Uncomment to force a static width
+   HEIGHT: 16   # Uncomment to force static height
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 15
+   FONT_COLOR: 255, 255, 255
+   # BACKGROUND_COLOR: 255, 255, 255
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mm
+  TEXT_GPU2:
+   TEXT: 9070 XT
+   X: 14
+   Y: 255
+   WIDTH: 155   # Uncomment to force a static width
+   HEIGHT: 16   # Uncomment to force static height
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 15
+   FONT_COLOR: 255, 255, 255
+   #BACKGROUND_COLOR: 0, 0, 0
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mm
+  TEXT_RAM:
+   TEXT: KINGSTON
+   X: 14
+   Y: 354
+   WIDTH: 156   # Uncomment to force a static width
+   HEIGHT: 16   # Uncomment to force static height
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 15
+   FONT_COLOR: 255, 255, 255
+   # BACKGROUND_COLOR: 255, 255, 255
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mm
+  TEXT_RAM2:
+   TEXT: HYPERX
+   X: 14
+   Y: 370
+   WIDTH: 155   # Uncomment to force a static width
+   HEIGHT: 16   # Uncomment to force static height
+   FONT: geforce/GeForce-Bold.ttf
+   FONT_SIZE: 15
+   FONT_COLOR: 255, 255, 255
+   #BACKGROUND_COLOR: 0, 0, 0
+   BACKGROUND_IMAGE: background.png
+   ALIGN: center  # left / center / right
+   ANCHOR: mm 
+STATS:
+  CPU:
+    PERCENTAGE:
+      # In seconds. Longer intervals cause this to refresh more slowly.
+      # Setting to lower values will display near real time data,
+      # but may cause significant CPU usage or the display not to update properly
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 35
+        Y: 80
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 85  # Uncomment to force a static width
+        HEIGHT: 38 # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf #geforce/GeForce-Bold.ttf #roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 42
+        FONT_COLOR: 0, 228, 255
+        #BACKGROUND_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: rt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html  
+      GRAPH:
+        SHOW: true
+        X: 175
+        Y: 143
+        WIDTH: 135
+        HEIGHT: 15
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 0, 228, 255
+        BAR_OUTLINE: true
+        #BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    FREQUENCY:
+      # In seconds. Longer intervals cause this to refresh more slowly.
+      # Setting to lower values will display near real time data,
+      # but may cause significant CPU usage or the display not to update properly
+      INTERVAL: 5
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 205
+        Y: 108
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 105   # Uncomment to force a static width
+        HEIGHT: 25   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html  
+    TEMPERATURE:
+      # In seconds. Longer intervals cause this to refresh more slowly.
+      # Setting to lower values will display near real time data,
+      # but may cause significant CPU usage or the display not to update properly
+      INTERVAL: 5
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 200
+        Y: 70
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 105   # Uncomment to force a static width
+        HEIGHT: 25   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html       
+
+  GPU:
+    INTERVAL: 1
+    MEMORY_PERCENT:
+      GRAPH:
+        SHOW: false
+        X: 175
+        Y: 256
+        WIDTH: 135
+        HEIGHT: 15
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 2, 216, 243
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+    PERCENTAGE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 35
+        Y: 199
+        WIDTH: 85  # Uncomment to force a static width
+        HEIGHT: 38 # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 42
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: rt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    TEMPERATURE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 200
+        Y: 187
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 105   # Uncomment to force a static width
+        HEIGHT: 25   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf 
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    FREQUENCY:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 205
+        Y: 220
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 105   # Uncomment to force a static width
+        HEIGHT: 25   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 50, 50, 50
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    MEMORY_TOTAL:
+      TEXT:
+        SHOW: false
+        SHOW_UNIT: true
+        X: 248
+        Y: 273
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 62   # Uncomment to force a static width
+        HEIGHT: 25   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 2, 216, 243
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right  # left / center / right
+        ANCHOR: rt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    MEMORY_USED:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 205
+        Y: 257
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 100   # Uncomment to force a static width
+        HEIGHT: 25   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 256, 256, 256
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 175
+        Y: 377
+        WIDTH: 135
+        HEIGHT: 15
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 2, 216, 243
+        BAR_OUTLINE: True
+        BACKGROUND_IMAGE: background.png
+        
+      USED:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 205
+        Y: 309
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 105   # Uncomment to force a static width
+        HEIGHT: 25   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      FREE:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 205
+        Y: 347
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 105   # Uncomment to force a static width
+        HEIGHT: 25   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 35
+        Y: 314
+        WIDTH: 85  # Uncomment to force a static width
+        HEIGHT: 38 # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 42
+        FONT_COLOR: 2, 216, 243
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: rt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+        
+  DISK:
+    INTERVAL: 10
+    USED:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        X: 35
+        Y: 434
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 47   # Uncomment to force a static width
+        HEIGHT: 14   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 35
+        Y: 409
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 75   # Uncomment to force a static width
+        HEIGHT: 20   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 25
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    TOTAL:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: True
+        X: 82
+        Y: 434
+        # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+        # To avoid this use one of these 2 methods (or both):
+        #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+        #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+        WIDTH: 65   # Uncomment to force a static width
+        HEIGHT: 14   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 2, 216, 243
+        #BACKGROUND_COLOR: 132, 80, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+        
+  NET:
+    INTERVAL: 1
+    WLO:
+      UPLOAD:
+        TEXT:
+          SHOW: true
+          X: 210
+          Y: 430
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          WIDTH: 95   # Uncomment to force a static width
+          HEIGHT: 14   # Uncomment to force static height
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 14
+          FONT_COLOR: 255, 255, 255
+          #BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+      DOWNLOAD:
+        TEXT:
+          SHOW: true
+          X: 210
+          Y: 409
+          # Text sensors may vary in size and create "ghosting" effects where old value stay displayed under the new one.
+          # To avoid this use one of these 2 methods (or both):
+          #   - either use a monospaced font (fonts with "mono" in name, see res/fonts/ for available fonts)
+          #   - or force a static width/height for the text field. Be sure to have enough space for the longest value that can be displayed (e.g. "100%" for a percentage)
+          WIDTH: 95   # Uncomment to force a static width
+          HEIGHT: 16   # Uncomment to force static height
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 14
+          FONT_COLOR: 255, 255, 255
+          #BACKGROUND_COLOR: 132, 154, 165
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left  # left / center / right
+          ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  WEATHER:
+    # For optimal use, if you want to stay on the free plan (1000 calls), the interval should be 90 MINIMUM (not really useful as the API didn't update that quickly)
+    INTERVAL: 600
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        X: 207
+        Y: 25
+        WIDTH: 80  # Uncomment to force a static width
+        HEIGHT: 18   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 255, 255
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right  # left / center / right
+        ANCHOR: rt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    WEATHER_DESCRIPTION:
+      TEXT:
+        SHOW: True
+        X: 97
+        Y: 7
+        WIDTH: 190   # Uncomment to force a static width
+        HEIGHT: 16   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 2, 216, 243
+        #BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png 
+        ALIGN: right  # left / center / right
+        ANCHOR: rt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+  DATE:
+    # For time display, it is recommended not to change the interval: keep to 1
+    INTERVAL: 1
+    DAY: # Format (Y/M/D ordering, month/day translations...) will match your computer locale
+      TEXT:
+        FORMAT: short # short (2/20/23) / medium (Feb 20, 2023) / long (February 20, 2023) / full (Monday, February 20, 2023) / custom pattern e.g. "yyyy.MM.dd" (2024.02.20)
+        SHOW: true
+        X: 34
+        Y: 25
+        WIDTH: 100  # Uncomment to force a static width
+        HEIGHT: 18   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        #BACKGROUND_COLOR: 132, 154, 165
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html
+    HOUR: # Format (12/24h, timezone translations) will match your computer locale
+      TEXT:
+        FORMAT: short # short (6:48 PM) / medium (6:48:53 PM) / long (6:48:53 PM UTC) / full (6:48:53 PM Coordinated Universal Time) / custom pattern e.g. "HH:mm:ss zzz" (6:48:53 EDT)
+        SHOW: True
+        X: 34
+        Y: 7
+        WIDTH: 60  # Uncomment to force a static width
+        HEIGHT: 16   # Uncomment to force static height
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 16
+        FONT_COLOR: 243, 230, 0
+        #BACKGROUND_COLOR: 20, 200, 50
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left  # left / center / right
+        ANCHOR: lt   # Check https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html        
