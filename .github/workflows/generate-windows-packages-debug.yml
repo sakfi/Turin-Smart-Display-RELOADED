@@ -39,7 +39,21 @@ jobs:
       uses: Minionguyjpro/Inno-Setup-Action@v1.2.9
       with:
         path: tools/windows-installer/turing-system-monitor.iss
-        options: /O+
+        options: /O+ /DMyAppVersion=${{github.event.release.tag_name}}-debug
+
+    - name: Verify and ensure installer output exists
+      run: |
+        $expected = "tools\windows-installer\Output\turing-system-monitor-${{github.event.release.tag_name}}-debug-windows.exe"
+        if (!(Test-Path $expected)) {
+          $actual = Get-ChildItem "tools\windows-installer\Output\*.exe" | Select-Object -First 1
+          if ($actual) {
+            Move-Item -Path $actual.FullName -Destination $expected -Force
+            Write-Host "Renamed $($actual.Name) to $expected"
+          } else {
+            Write-Error "Installer file not found in tools\windows-installer\Output\"
+            exit 1
+          }
+        }
 
     - name: Create portable zip archive from generated binaries
       run: |

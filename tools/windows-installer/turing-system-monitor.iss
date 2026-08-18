@@ -6,7 +6,9 @@
 #define WizardDir "..\..\tools\windows-installer\"
 
 #define MyAppName "Turing System Monitor"
+#ifndef MyAppVersion
 #define MyAppVersion GetStringFileInfo(SourceDir + "main.exe", PRODUCT_VERSION)
+#endif
 #define MyAppPublisher "Matthieu Houdebine"
 #define MyAppURL "https://github.com/mathoudebine/turing-smart-screen-python"
 
