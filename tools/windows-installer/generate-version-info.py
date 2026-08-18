@@ -34,11 +34,11 @@ info = versioninfo.load_version_info_from_text_file(VERSION_INFO_FILE)
 if not info:
     raise SystemExit("Error: VersionInfo resource not found in exe")
 
-# Get version number from argument
-version = sys.argv[1].split('.')
-major = int(version[0])
-minor = int(version[1])
-revision = int(version[2])
+# Get version number from argument (strip leading 'v'/'V' if present)
+raw_version = sys.argv[1].lstrip('vV').split('.')
+major = int(raw_version[0]) if len(raw_version) > 0 and raw_version[0].isdigit() else 1
+minor = int(raw_version[1]) if len(raw_version) > 1 and raw_version[1].isdigit() else 0
+revision = int(raw_version[2]) if len(raw_version) > 2 and raw_version[2].isdigit() else 0
 build = 0  # For this project we only use 3-digit versions
 
 if len(sys.argv) == 3 and sys.argv[2] == "debug":
