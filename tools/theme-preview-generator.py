@@ -27,22 +27,24 @@ import os
 import yaml
 
 
-def get_themes(display_size: str):
-    themes = []
+def get_all_themes_by_size():
     directory = 'res/themes/'
-    for filename in os.listdir('res/themes'):
-        dir = os.path.join(directory, filename)
-        # checking if it is a directory
-        if os.path.isdir(dir):
-            # Check if a theme.yaml file exists
-            theme = os.path.join(dir, 'theme.yaml')
+    size_map = {}
+    for filename in sorted(os.listdir(directory), key=str.casefold):
+        dir_path = os.path.join(directory, filename)
+        if os.path.isdir(dir_path):
+            theme = os.path.join(dir_path, 'theme.yaml')
             if os.path.isfile(theme):
-                # Get display size from theme.yaml
                 with open(theme, "rt", encoding='utf8') as stream:
-                    theme_data = yaml.safe_load(stream)
-                    if theme_data['display'].get("DISPLAY_SIZE", '3.5"') == display_size:
-                        themes.append(filename)
-    return sorted(themes, key=str.casefold)
+                    try:
+                        theme_data = yaml.safe_load(stream)
+                        size = theme_data.get('display', {}).get("DISPLAY_SIZE", '3.5"')
+                    except Exception:
+                        size = '3.5"'
+                    if size not in size_map:
+                        size_map[size] = []
+                    size_map[size].append(filename)
+    return size_map
 
 
 def write_theme_previews_to_file(themes, file, size):
@@ -60,23 +62,28 @@ def write_theme_previews_to_file(themes, file, size):
 
 
 if __name__ == "__main__":
-    themes21inch = get_themes('2.1"')
-    themes3inch = get_themes('3.5"')
-    themes5inch = get_themes('5"')
-    themes88inch = get_themes('8.8"')
+    size_map = get_all_themes_by_size()
+
+    # Sort sizes numerically if possible
+    def parse_size_key(s):
+        try:
+            return float(s.replace('"', '').strip())
+        except ValueError:
+            return 999.0
+
+    sorted_sizes = sorted(size_map.keys(), key=parse_size_key)
 
     with open("res/themes/themes.md", "w", encoding='utf-8') as file:
         file.write("<!--- This file is generated automatically by GitHub Actions, do not edit it! --->\n")
         file.write("\n")
-        file.write("# Turing Smart Screen themes\n")
+        file.write("# Turin Smart Display Themes Gallery\n")
         file.write("\n")
         file.write("ℹ️ Click on a preview to view full size\n\n")
-        file.write("[2.1\" themes](#21-themes)\n\n")
-        file.write("[3.5\" themes](#35-themes)\n\n")
-        file.write("[5\" themes](#5-themes)\n\n")
-        file.write("[8.8\" themes](#88-themes)\n")
 
-        write_theme_previews_to_file(themes21inch, file, "2.1\"")
-        write_theme_previews_to_file(themes3inch, file, "3.5\"")
-        write_theme_previews_to_file(themes5inch, file, "5\"")
-        write_theme_previews_to_file(themes88inch, file, "8.8\"")
+        for sz in sorted_sizes:
+            anchor = sz.replace('"', '').replace('.', '').strip()
+            file.write(f"[{sz} themes](#{anchor}-themes)\n\n")
+
+        for sz in sorted_sizes:
+            write_theme_previews_to_file(size_map[sz], file, sz)
+

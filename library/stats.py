@@ -845,6 +845,19 @@ class Custom:
                     display_themed_line_graph(theme_data=theme_data, values=last_values)
 
 
+WMO_WEATHER_CODES = {
+    0: "Clear sky", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
+    45: "Foggy", 48: "Depositing rime fog", 51: "Light drizzle", 53: "Moderate drizzle",
+    55: "Dense drizzle", 56: "Light freezing drizzle", 57: "Dense freezing drizzle",
+    61: "Slight rain", 63: "Moderate rain", 65: "Heavy rain", 66: "Light freezing rain",
+    67: "Heavy freezing rain", 71: "Slight snow fall", 73: "Moderate snow fall",
+    75: "Heavy snow fall", 77: "Snow grains", 80: "Slight rain showers",
+    81: "Moderate rain showers", 82: "Violent rain showers", 85: "Slight snow showers",
+    86: "Heavy snow showers", 95: "Thunderstorm", 96: "Thunderstorm with hail",
+    99: "Thunderstorm with heavy hail"
+}
+
+
 class Weather:
     @staticmethod
     def stats():
@@ -866,6 +879,7 @@ class Weather:
             feel = None
             time = None
             humidity = None
+            desc = "Unknown"
             if HW_SENSORS in ["STATIC", "STUB"]:
                 temp = "17.5°C"
                 feel = "(17.2°C)"
@@ -874,16 +888,18 @@ class Weather:
                 humidity = "45%"
             else:
                 # API Parameters
-                lat = config.CONFIG_DATA['config'].get('WEATHER_LATITUDE', "")
-                lon = config.CONFIG_DATA['config'].get('WEATHER_LONGITUDE', "")
+                lat = config.CONFIG_DATA['config'].get('WEATHER_LATITUDE', 45.75)
+                lon = config.CONFIG_DATA['config'].get('WEATHER_LONGITUDE', 4.85)
+                provider = str(config.CONFIG_DATA['config'].get('WEATHER_PROVIDER', 'open-meteo')).lower()
                 api_key = config.CONFIG_DATA['config'].get('WEATHER_API_KEY', "")
                 units = config.CONFIG_DATA['config'].get('WEATHER_UNITS', "metric")
                 lang = config.CONFIG_DATA['config'].get('WEATHER_LANGUAGE', "en")
-                deg = WEATHER_UNITS.get(units, '°?')
-                if api_key:
+                deg = WEATHER_UNITS.get(units, '°C')
+
+                if provider == 'openweathermap' and api_key:
                     url = f'https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=minutely,hourly,daily,alerts&appid={api_key}&units={units}&lang={lang}'
                     try:
-                        response = requests.get(url)
+                        response = requests.get(url, timeout=5)
                         if response.status_code == 200:
                             data = response.json()
                             temp = f"{data['current']['temp']:.1f}{deg}"
@@ -893,16 +909,38 @@ class Weather:
                             now = datetime.datetime.now()
                             time = f"@{now.hour:02d}:{now.minute:02d}"
                         else:
-                            logger.error(f"Error {response.status_code} fetching OpenWeatherMap API:")
-                            # logger.error(f"Response content: {response.content}")
-                            # logger.error(response.text)
-                            desc = response.json().get('message')
+                            logger.error(f"Error {response.status_code} fetching OpenWeatherMap API")
+                            desc = response.json().get('message', 'API Error')
                     except Exception as e:
                         logger.error(f"Error fetching OpenWeatherMap API: {str(e)}")
-                        desc = "Error fetching OpenWeatherMap API"
+                        desc = "Weather API Error"
                 else:
-                    logger.warning("No OpenWeatherMap API key provided in config.yaml")
-                    desc = "No OpenWeatherMap API key"
+                    # Open-Meteo (100% Free & Open-Source, Keyless)
+                    temp_unit = 'fahrenheit' if units == 'imperial' else 'celsius'
+                    url = f'https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code&temperature_unit={temp_unit}'
+                    try:
+                        response = requests.get(url, timeout=5)
+                        if response.status_code == 200:
+                            data = response.json().get('current', {})
+                            raw_temp = data.get('temperature_2m', 0.0)
+                            raw_feel = data.get('apparent_temperature', 0.0)
+                            if units == 'standard':
+                                raw_temp += 273.15
+                                raw_feel += 273.15
+
+                            temp = f"{raw_temp:.1f}{deg}"
+                            feel = f"({raw_feel:.1f}{deg})"
+                            wcode = data.get('weather_code', 0)
+                            desc = WMO_WEATHER_CODES.get(wcode, "Clear sky")
+                            humidity = f"{data.get('relative_humidity_2m', 0):.0f}%"
+                            now = datetime.datetime.now()
+                            time = f"@{now.hour:02d}:{now.minute:02d}"
+                        else:
+                            logger.error(f"Error {response.status_code} fetching Open-Meteo API")
+                            desc = "Open-Meteo Error"
+                    except Exception as e:
+                        logger.error(f"Error fetching Open-Meteo API: {str(e)}")
+                        desc = "Weather Fetch Error"
 
         if activate:
             # Display Temperature

@@ -1,0 +1,114 @@
+---
+author: "@Kunoz07"
+
+display:
+  DISPLAY_SIZE: '3.5"'
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 0, 150, 255
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 320
+    HEIGHT: 480
+
+static_text:
+  TITLE:
+    TEXT: "SYSTEM MONITOR"
+    X: 20
+    Y: 20
+    FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 0, 200, 255
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 60
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+      BAR:
+        SHOW: True
+        X: 20
+        Y: 90
+        WIDTH: 280
+        HEIGHT: 12
+        COLOR: 0, 180, 255
+    TEMP:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 120
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+
+  GPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 170
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+      BAR:
+        SHOW: True
+        X: 20
+        Y: 200
+        WIDTH: 280
+        HEIGHT: 12
+        COLOR: 0, 220, 180
+    TEMP:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 230
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+
+  RAM:
+    PERCENTAGE:
+      INTERVAL: 2
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 200
+        Y: 280
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+      BAR:
+        SHOW: True
+        X: 20
+        Y: 310
+        WIDTH: 280
+        HEIGHT: 12
+        COLOR: 150, 100, 255
+
+  DATETIME:
+    TIME:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        FORMAT: "%H:%M:%S"
+        X: 80
+        Y: 420
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 26
+        FONT_COLOR: 255, 255, 255

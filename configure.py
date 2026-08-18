@@ -699,21 +699,21 @@ class MoreConfigWindow:
         self.ping_entry = ttk.Entry(self.window)
         self.ping_entry.place(x=190, y=5, width=250)
 
-        weather_label = ttk.Label(self.window, text='Weather forecast (OpenWeatherMap API)', font='bold')
+        weather_label = ttk.Label(self.window, text='Weather forecast (Open-Meteo / OpenWeatherMap)', font='bold')
         weather_label.place(x=10, y=70)
 
         weather_info_label = ttk.Label(self.window,
-                                       text="To display weather forecast on themes that support it, you need an OpenWeatherMap \"One Call API 3.0\" key.\n"
-                                            "You will get 1,000 API calls per day for free. This program is configured to stay under this threshold (~300 calls/day).")
+                                       text="Weather forecast uses Open-Meteo (100% Free & Open-Source, no API key required).\n"
+                                            "Optionally enter an OpenWeatherMap API key below if you prefer using OpenWeatherMap.")
         weather_info_label.place(x=10, y=100)
         weather_api_link_label = ttk.Label(self.window,
-                                           text="Click here to subscribe to OpenWeatherMap One Call API 3.0.")
+                                           text="Click here to learn more about Open-Meteo API.")
         weather_api_link_label.place(x=10, y=140)
         weather_api_link_label.config(foreground="#a3a3ff", cursor="hand2")
         weather_api_link_label.bind("<Button-1>",
-                                    lambda e: webbrowser.open_new_tab("https://openweathermap.org/api"))
+                                    lambda e: webbrowser.open_new_tab("https://open-meteo.com/"))
 
-        self.api_label = ttk.Label(self.window, text='OpenWeatherMap API key')
+        self.api_label = ttk.Label(self.window, text='API key (Optional)')
         self.api_label.place(x=10, y=170)
         self.api_entry = ttk.Entry(self.window)
         self.api_entry.place(x=190, y=165, width=250)
