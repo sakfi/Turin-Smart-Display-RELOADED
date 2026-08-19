@@ -201,9 +201,13 @@ def get_theme_data(name: str):
     if dir.is_dir():
         theme = dir / "theme.yaml"
         if theme.is_file():
-            with open(theme, "rt", encoding="utf8") as stream:
-                theme_data, ind, bsi = ruamel.yaml.util.load_yaml_guess_indent(stream)
-                return theme_data
+            try:
+                with open(theme, "rt", encoding="utf8") as stream:
+                    theme_data, ind, bsi = ruamel.yaml.util.load_yaml_guess_indent(stream)
+                    return theme_data
+            except Exception as e:
+                print(f"Error loading theme {name}: {e}")
+                return None
     return None
 
 

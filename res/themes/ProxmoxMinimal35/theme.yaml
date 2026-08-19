@@ -339,7 +339,6 @@ STATS:
         BACKGROUND_IMAGE: background.png
         ALIGN: center
         ANCHOR: lt
-    INTERVAL: 1
     ProxmoxDateTime:
       TEXT:
         SHOW: True
@@ -351,7 +350,6 @@ STATS:
         BACKGROUND_IMAGE: background.png
         ALIGN: center
         ANCHOR: lt
-    INTERVAL: 5
     ProxmoxCpuFanRPM:
       TEXT:
         SHOW: True
