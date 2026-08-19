@@ -39,7 +39,7 @@ jobs:
       uses: Minionguyjpro/Inno-Setup-Action@v1.2.9
       with:
         path: tools/windows-installer/turing-system-monitor.iss
-        options: '/O+ "/DMyAppVersion=${{github.event.release.tag_name}}"'
+        options: '"/DMyAppVersion=${{github.event.release.tag_name}}"'
 
     - name: Verify and ensure installer output exists
       run: |
