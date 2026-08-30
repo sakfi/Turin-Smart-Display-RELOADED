@@ -1,0 +1,153 @@
+---
+author: "Top_Bunk"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 0
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      RADIAL:
+        SHOW: True
+        X: 122
+        Y: 77
+        RADIUS: 57
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 135
+        ANGLE_END: 44
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 0, 140, 0
+        SHOW_TEXT: False
+        SHOW_UNIT: True
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 200, 200, 200
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 87
+        Y: 134
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 180, 180, 180
+        BACKGROUND_IMAGE: background.png
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      RADIAL:
+        SHOW: True
+        X: 355
+        Y: 77
+        RADIUS: 57
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 135
+        ANGLE_END: 44
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 0, 140, 0
+        SHOW_TEXT: False
+        SHOW_UNIT: True
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 180, 180, 180
+        # BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 321
+        Y: 134
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 180, 180, 180
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 1
+    VIRTUAL:
+      RADIAL:
+        SHOW: True
+        X: 352
+        Y: 248
+        RADIUS: 57
+        WIDTH: 10
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 135
+        ANGLE_END: 44
+        ANGLE_STEPS: 20
+        ANGLE_SEP: 0
+        CLOCKWISE: True
+        BAR_COLOR: 0, 140, 0
+        SHOW_TEXT: False
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 14
+        FONT_COLOR: 128, 255, 255
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 322
+        Y: 293
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+  NET:
+    INTERVAL: 1
+    ETH:
+      DOWNLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 60
+          Y: 190
+          WIDTH: 143
+          HEIGHT: 32
+          MIN_VALUE: 0
+          MAX_VALUE: 90000000
+          HISTORY_SIZE: 50
+          AUTOSCALE: False
+          LINE_COLOR: 0, 200, 0
+          LINE_WIDTH: 1
+          AXIS: False
+          AXIS_COLOR: 170, 170, 170
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background.png
+      UPLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 60
+          Y: 270
+          WIDTH: 143
+          HEIGHT: 32
+          MIN_VALUE: 0
+          MAX_VALUE: 4000000
+          HISTORY_SIZE: 50
+          AUTOSCALE: False
+          LINE_COLOR: 0, 200, 0
+          LINE_WIDTH: 1
+          AXIS: False
+          AXIS_COLOR: 170, 170, 170
+          # BACKGROUND_COLOR: 0, 0, 0
+          BACKGROUND_IMAGE: background.png
