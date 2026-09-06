@@ -1,0 +1,454 @@
+---
+author: "@jdcortes-dev"
+
+display:
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 100, 207, 213
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+static_text:
+  SUPER_CREDITS:
+    TEXT: "3 , 9 9 9"
+    X: 270
+    Y: 58
+    FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+    FONT_SIZE: 14
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  MEDALLS:
+    TEXT: "2 5 0"
+    X: 400
+    Y: 58
+    FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+    FONT_SIZE: 14
+    FONT_COLOR: 255, 255, 255
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: TRUE
+        SHOW_UNIT: True
+        X: 350
+        Y: 222
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      GRAPH:
+        SHOW: True
+        X: 310
+        Y: 232
+        WIDTH: 150
+        HEIGHT: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 78, 224, 119
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False
+        X: 24
+        Y: 89
+        WIDTH: 80
+        HEIGHT: 60
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        HISTORY_SIZE: 50
+        AUTOSCALE: False
+        LINE_COLOR: 250, 50, 50
+        LINE_WIDTH: 1
+        AXIS: True
+        #AXIS_COLOR: 100, 207, 213
+        AXIS_COLOR: 255, 255, 50
+        AXIS_FONT: roboto/Roboto-Black.ttf
+        AXIS_FONT_SIZE: 10
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 350
+        Y: 262
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      GRAPH:
+        SHOW: True
+        X: 310
+        Y: 276
+        WIDTH: 150
+        HEIGHT: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 120
+        BAR_COLOR: 78, 224, 119
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+    FAN_SPEED:
+      INTERVAL: 5
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 86
+        Y: 40
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 12
+        FONT_COLOR: 250, 128, 45
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      GRAPH:
+        SHOW: False
+        X: 22
+        Y: 35
+        WIDTH: 192
+        HEIGHT: 7
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 250, 128, 45
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      GRAPH:
+        SHOW: True
+        X: 50
+        Y: 217
+        WIDTH: 100
+        HEIGHT: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 78, 224, 119
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+      TOTAL:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 100
+        Y: 204
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      USED:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 350
+        Y: 295
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 250, 128, 45
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      FREE:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 164
+        Y: 292
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 250, 128, 45
+        # BACKGROUND_COLOR: 132, 154, 165
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 50
+        Y: 204
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+  DISK:
+    INTERVAL: 10
+    USED:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 105
+        Y: 143
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      GRAPH:
+        SHOW: True
+        X: 50
+        Y: 158
+        WIDTH: 100
+        HEIGHT: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 78, 224, 119
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 55
+        Y: 143
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+    TOTAL:
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 100
+        Y: 150
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+    FREE:
+      TEXT:
+        SHOW: False
+        SHOW_UNIT: False
+        X: 150
+        Y: 145
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 250, 128, 45
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+  NET:
+    INTERVAL: 1
+    #ETH:
+      #DOWNLOAD:
+        #LINE_GRAPH:
+          #SHOW: True
+          #X: 281
+          #Y: 140
+          #WIDTH: 82
+          #HEIGHT: 66
+          #MIN_VALUE: 0
+          #MAX_VALUE: 10000000
+          #HISTORY_SIZE: 50
+          #AUTOSCALE: True
+          #LINE_COLOR: 250, 50, 50
+          #LINE_WIDTH: 1
+          #AXIS: True
+          #AXIS_COLOR: 255, 255, 50
+          #AXIS_FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+          #AXIS_FONT_SIZE: 10
+          #BACKGROUND_IMAGE: background.png
+        #TEXT:
+          #SHOW: True
+          #X: 305
+          #Y: 128
+          #FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+          #FONT_SIZE: 12
+          #FONT_COLOR: 255, 255, 255
+          #BACKGROUND_IMAGE: background.png
+          #ALIGN: left
+          #ANCHOR: lt
+      #UPLOAD:
+        #LINE_GRAPH:
+         # SHOW: True
+          #X: 380
+          #Y: 140
+          #WIDTH: 82
+          #HEIGHT: 66
+          #MIN_VALUE: 0
+          #MAX_VALUE: 3000000
+          #HISTORY_SIZE: 50
+          #AUTOSCALE: True
+          #LINE_COLOR: 250, 50, 50
+          #LINE_WIDTH: 1
+          #AXIS: True
+          #AXIS_COLOR: 255, 255, 50
+          #AXIS_FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+          #AXIS_FONT_SIZE: 10
+          #BACKGROUND_IMAGE: background.png
+        #TEXT:
+          #SHOW: True
+          #X: 405
+          #Y: 128
+          #FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+          #FONT_SIZE: 12
+          #FONT_COLOR: 255, 255, 255
+          #BACKGROUND_IMAGE: background.png
+          #ALIGN: left
+          #ANCHOR: lt
+    WLO:
+      DOWNLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 281
+          Y: 140
+          WIDTH: 82
+          HEIGHT: 66
+          MIN_VALUE: 0
+          MAX_VALUE: 65000
+          HISTORY_SIZE: 50
+          AUTOSCALE: True
+          LINE_COLOR: 250, 50, 50
+          LINE_WIDTH: 1
+          AXIS: True
+          AXIS_COLOR: 255, 255, 50
+          AXIS_FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+          AXIS_FONT_SIZE: 10
+          BACKGROUND_IMAGE: background.png
+        TEXT:
+          SHOW: True
+          X: 305
+          Y: 128
+          HEIGHT: 12
+          FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+          FONT_SIZE: 10
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left
+          ANCHOR: lt
+      UPLOAD:
+        LINE_GRAPH:
+          SHOW: True
+          X: 380
+          Y: 140
+          WIDTH: 82
+          HEIGHT: 66
+          MIN_VALUE: 0
+          MAX_VALUE: 20000
+          HISTORY_SIZE: 50
+          AUTOSCALE: True
+          LINE_COLOR: 250, 50, 50
+          LINE_WIDTH: 1
+          AXIS: True
+          AXIS_COLOR: 255, 255, 50
+          AXIS_FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+          AXIS_FONT_SIZE: 10
+          BACKGROUND_IMAGE: background.png
+        TEXT:
+          SHOW: True
+          X: 405
+          Y: 128
+          HEIGHT: 12
+          FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+          FONT_SIZE: 10
+          FONT_COLOR: 255, 255, 255
+          BACKGROUND_IMAGE: background.png
+          ALIGN: left
+          ANCHOR: lt
+  DATE:
+    INTERVAL: 1
+    DAY:
+      TEXT:
+        FORMAT: medium
+        SHOW: True
+        X: 54
+        Y: 55
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 13
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        WIDTH: 78
+        ANCHOR: lt
+    HOUR:
+      TEXT:
+        FORMAT: "HH:mm:ss zzz"
+        SHOW: True
+        X: 54
+        Y: 70
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 13
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        WIDTH: 92
+        ANCHOR: lt
+#  UPTIME:
+#    INTERVAL: 1
+#    FORMATTED:
+#      TEXT:
+#        SHOW: True
+#        X: 185
+#        Y: 8
+#        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+#        FONT_SIZE: 15
+#        FONT_COLOR: 250, 128, 45
+#        BACKGROUND_IMAGE: background.png
+#        ALIGN: center
+#        ANCHOR: lt
+  GPU:
+    INTERVAL: 1
+    GPU_MODEL:
+      TEXT:
+        SHOW: True
+        TEXT: "GEFORCE RTX 5060"
+        X: 80
+        Y: 250
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 10
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 70
+        Y: 265
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+      GRAPH:
+        SHOW: True
+        X: 50
+        Y: 276
+        WIDTH: 100
+        HEIGHT: 12
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 78, 224, 119
+        BAR_OUTLINE: False
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 110
+        Y: 264
+        FONT: zx-gamut-medium/zx-gamut-medium-regular.otf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt

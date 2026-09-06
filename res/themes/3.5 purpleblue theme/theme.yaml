@@ -1,0 +1,222 @@
+author: "Ballbreaker"
+
+display:
+  DISPLAY_SIZE: '3.5"'
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 60, 60, 60
+
+static_images:
+  BACKGROUND:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 480
+    HEIGHT: 320
+
+STATS:
+  CPU:
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 100
+        Y: 30
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+  # CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 28
+
+        Y: 33
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+    # CPU clock / frequency in GHz
+    FREQUENCY:
+      INTERVAL: 1
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 330
+        Y: 15
+        WIDTH: 120
+        HEIGHT: 26
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 24
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+        ALIGN: left
+        ANCHOR: lt
+
+    # Text only
+    FAN_SPEED:
+      INTERVAL: 5
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 370
+        Y: 270
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 24
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+
+  CUSTOM:
+    INTERVAL: 1
+
+    CpuWatts:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 190
+        Y: 20
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+    GpuWatts:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 190
+        Y: 44
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+  MEMORY:
+    INTERVAL: 5
+    VIRTUAL:
+      # NEW: RAM usage % (virtual memory usage percent text) :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
+      PERCENT_TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 394
+        Y: 122
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+
+      # NEW: RAM used in MB (shows like "12342Mb") :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}
+      USED:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 340
+        Y: 202
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+
+  GPU:
+    INTERVAL: 1
+
+    PERCENTAGE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 75
+        Y: 200
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+
+    MEMORY_PERCENT:
+      
+
+      TEXT:
+        SHOW: false
+        SHOW_UNIT: False
+        X: 35
+        Y: 165
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 20
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+    MEMORY:
+      INTERVAL: 1
+      GRAPH:
+        SHOW: False
+        X: 35
+        Y: 165
+        WIDTH: 150
+        HEIGHT: 15
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 105, 105, 105
+        BACKGROUND_IMAGE: background.png
+
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: True
+        X: 25
+        Y: 165
+        FONT: roboto-mono/RobotoMono-Bold.ttf
+        FONT_SIZE: 15
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+    TEMPERATURE:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 152
+        Y: 128
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 220, 220, 220
+        BACKGROUND_IMAGE: background.png
+
+    FAN_SPEED:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 25
+        Y: 130
+        FONT: roboto/Roboto-Bold.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+
+    FPS:
+      TEXT:
+        SHOW: True
+        SHOW_UNIT: False
+        X: 184
+        Y: 266
+        MIN_SIZE: 4
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_SIZE: 38
+        FONT_COLOR: 235, 235, 235
+        BACKGROUND_IMAGE: background.png
+      LINE_GRAPH:
+        SHOW: False   # FIXED (was "Fa")
+        X: 180
+        Y: 220
+        WIDTH: 133
+        HEIGHT: 82
+        MIN_VALUE: 0
+        MAX_VALUE: 144
+        HISTORY_SIZE: 100
+        AUTOSCALE: True
+        LINE_COLOR: 235, 235, 235
+        AXIS: True
+        BACKGROUND_IMAGE: background.png
