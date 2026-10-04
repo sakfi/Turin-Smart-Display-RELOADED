@@ -1,0 +1,228 @@
+author: '@Ven4enzo'
+display:
+  DISPLAY_SIZE: 0.96"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 85, 85, 85
+
+static_images:
+  background:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 160
+    HEIGHT: 80
+
+static_text:
+  CPU_LABEL:
+    TEXT: "CPU"
+    X: 3
+    Y: 47
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 11
+    FONT_COLOR: 255, 165, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  GPU_LABEL:
+    TEXT: "GPU"
+    X: 83
+    Y: 7
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 11
+    FONT_COLOR: 255, 165, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: center
+    ANCHOR: lt
+  MEM_LABEL:
+    TEXT: "RAM"
+    X: 83
+    Y: 27
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 11
+    FONT_COLOR: 255, 165, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  DISK_LABEL:
+    TEXT: "HDD"
+    X: 83
+    Y: 47
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 11
+    FONT_COLOR: 255, 165, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: left
+    ANCHOR: lt
+  NET_UPL_LABEL:
+    TEXT: "UP"
+    X: 3
+    Y: 67
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 9
+    FONT_COLOR: 0, 255, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: center
+    ANCHOR: lt
+  NET_DWL_LABEL:
+    TEXT: "DN"
+    X: 83
+    Y: 67
+    FONT: generale-mono/GeneraleMonoA.ttf
+    FONT_SIZE: 9
+    FONT_COLOR: 255, 0, 0
+    BACKGROUND_IMAGE: background.png
+    ALIGN: center
+    ANCHOR: lt
+
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 47
+        Y: 47
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 255, 165, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: lt
+      GRAPH:
+        SHOW: true
+        X: 25
+        Y: 47
+        WIDTH: 22
+        HEIGHT: 9
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 165, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 127
+        Y: 7
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 255, 165, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: lt
+      GRAPH:
+        SHOW: true
+        X: 105
+        Y: 7
+        WIDTH: 22
+        HEIGHT: 9
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 165, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+    TEMPERATURE:
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 7
+        Y: 7
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 17
+        FONT_COLOR: 255, 165, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: lt
+      GRAPH:
+        SHOW: true
+        X: 3
+        Y: 27
+        WIDTH: 73
+        HEIGHT: 9
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 165, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+  MEMORY:
+    INTERVAL: 1
+    VIRTUAL:
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 127
+        Y: 27
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 255, 165, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: lt
+      GRAPH:
+        SHOW: true
+        X: 105
+        Y: 27
+        WIDTH: 22
+        HEIGHT: 9
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 165, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+  DISK:
+    INTERVAL: 10
+    USED:
+      PERCENT_TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        X: 127
+        Y: 47
+        FONT: generale-mono/GeneraleMonoA.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 255, 165, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: lt
+      GRAPH:
+        SHOW: true
+        X: 105
+        Y: 47
+        WIDTH: 22
+        HEIGHT: 9
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 165, 0
+        BAR_OUTLINE: true
+        BACKGROUND_IMAGE: background.png
+  NET:
+    INTERVAL: 1
+    WLO:
+      UPLOAD:
+        TEXT:
+          SHOW: true
+          SHOW_UNIT: true
+          X: 16
+          Y: 67
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 9
+          FONT_COLOR: 0, 255, 0
+          BACKGROUND_IMAGE: background.png
+          ALIGN: center
+          ANCHOR: lt
+      DOWNLOAD:
+        TEXT:
+          SHOW: true
+          SHOW_UNIT: true
+          X: 95
+          Y: 67
+          FONT: generale-mono/GeneraleMonoA.ttf
+          FONT_SIZE: 9
+          FONT_COLOR: 255, 0, 0
+          BACKGROUND_IMAGE: background.png
+          ALIGN: center
+          ANCHOR: lt
