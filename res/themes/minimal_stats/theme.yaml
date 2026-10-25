@@ -1,0 +1,150 @@
+display:
+  width: 80
+  height: 160
+  orientation: portrait
+  background: '#0a0a0c'
+
+static_elements:
+- type: text
+  text: HW MONITOR
+  x: 40
+  y: 10
+  font: fonts/DejaVuSans-Bold.ttf
+  size: 9
+  color: '#71717a'
+  align: center
+
+- type: line
+  x1: 6
+  y1: 18
+  x2: 74
+  y2: 18
+  color: '#27272a'
+  width: 1
+
+dynamic_elements:
+  # --- CPU Section ---
+- type: text
+  text: CPU
+  x: 8
+  y: 28
+  font: fonts/DejaVuSans-Bold.ttf
+  size: 10
+  color: '#38bdf8'
+
+- type: sensor_text
+  sensor: cpu_temperature
+  format: '{:.0f}°C'
+  x: 72
+  y: 28
+  font: fonts/DejaVuSans.ttf
+  size: 10
+  color: '#e4e4e7'
+  align: right
+
+- type: sensor_bar
+  sensor: cpu_percent
+  x: 8
+  y: 42
+  width: 64
+  height: 4
+  min: 0
+  max: 100
+  fill_color: '#38bdf8'
+  background_color: '#18181b'
+
+- type: sensor_text
+  sensor: cpu_percent
+  format: LOAD {:>3.0f}%
+  x: 72
+  y: 50
+  font: fonts/DejaVuSans.ttf
+  size: 8
+  color: '#a1a1aa'
+  align: right
+
+  # --- Divider ---
+- type: line
+  x1: 8
+  y1: 66
+  x2: 72
+  y2: 66
+  color: '#27272a'
+  width: 1
+
+  # --- GPU Section ---
+- type: text
+  text: GPU
+  x: 8
+  y: 76
+  font: fonts/DejaVuSans-Bold.ttf
+  size: 10
+  color: '#f43f5e'
+
+- type: sensor_text
+  sensor: gpu_temperature
+  format: '{:.0f}°C'
+  x: 72
+  y: 76
+  font: fonts/DejaVuSans.ttf
+  size: 10
+  color: '#e4e4e7'
+  align: right
+
+- type: sensor_bar
+  sensor: gpu_percent
+  x: 8
+  y: 90
+  width: 64
+  height: 4
+  min: 0
+  max: 100
+  fill_color: '#f43f5e'
+  background_color: '#18181b'
+
+- type: sensor_text
+  sensor: gpu_percent
+  format: LOAD {:>3.0f}%
+  x: 72
+  y: 98
+  font: fonts/DejaVuSans.ttf
+  size: 8
+  color: '#a1a1aa'
+  align: right
+
+  # --- Divider ---
+- type: line
+  x1: 8
+  y1: 114
+  x2: 72
+  y2: 114
+  color: '#27272a'
+  width: 1
+
+  # --- RAM & Time Section ---
+- type: text
+  text: RAM
+  x: 8
+  y: 124
+  font: fonts/DejaVuSans-Bold.ttf
+  size: 9
+  color: '#a1a1aa'
+
+- type: sensor_text
+  sensor: ram_percent
+  format: '{:.0f}%'
+  x: 72
+  y: 124
+  font: fonts/DejaVuSans.ttf
+  size: 9
+  color: '#fbbf24'
+  align: right
+
+- type: time_text
+  format: '%H:%M'
+  x: 40
+  y: 145
+  font: fonts/DejaVuSans-Bold.ttf
+  size: 11
+  color: '#52525b'
+  align: center

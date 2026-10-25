@@ -1,0 +1,194 @@
+author: '@Capt-Khair'
+display:
+  DISPLAY_SIZE: 80x160
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 85, 85, 85
+
+static_images:
+  background:
+    PATH: background.png
+    X: 0
+    Y: 0
+    WIDTH: 80
+    HEIGHT: 160
+
+static_text:
+  TITLE:
+    TEXT: GPU HOTSPOT
+    X: 40
+    Y: 5
+    WIDTH: 80
+    HEIGHT: 0
+    FONT: custom\arialbd.ttf
+    FONT_SIZE: 9
+    FONT_COLOR: 255, 68, 68
+    ALIGN: center
+    ANCHOR: mt
+    ROTATION: 0
+    BACKGROUND_IMAGE: background.png
+
+  DIVIDER_TOP:
+    TEXT: "__________________"
+    X: 40
+    Y: 13
+    WIDTH: 80
+    HEIGHT: 0
+    FONT: custom\arial.ttf
+    FONT_SIZE: 8
+    FONT_COLOR: 70, 20, 20
+    ALIGN: center
+    ANCHOR: mt
+    ROTATION: 0
+    BACKGROUND_IMAGE: background.png
+
+  LOAD_LABEL:
+    TEXT: "LOAD"
+    X: 14
+    Y: 88
+    WIDTH: 0
+    HEIGHT: 0
+    FONT: custom\arialbd.ttf
+    FONT_SIZE: 11
+    FONT_COLOR: 255, 170, 0
+    ALIGN: left
+    ANCHOR: lt
+    ROTATION: 0
+    BACKGROUND_IMAGE: background.png
+
+  DIVIDER_MID:
+    TEXT: "__________________"
+    X: 40
+    Y: 101
+    WIDTH: 80
+    HEIGHT: 0
+    FONT: custom\arial.ttf
+    FONT_SIZE: 8
+    FONT_COLOR: 70, 20, 20
+    ALIGN: center
+    ANCHOR: mt
+    ROTATION: 0
+    BACKGROUND_IMAGE: background.png
+
+  VRAM_LABEL:
+    TEXT: "VRAM"
+    X: 6
+    Y: 115
+    WIDTH: 0
+    HEIGHT: 0
+    FONT: custom\arialbd.ttf
+    FONT_SIZE: 12
+    FONT_COLOR: 160, 160, 160
+    ALIGN: left
+    ANCHOR: lt
+    ROTATION: 0
+    BACKGROUND_IMAGE: background.png
+
+  CLOCK_LABEL:
+    TEXT: "CLOCK"
+    X: 6
+    Y: 136
+    WIDTH: 0
+    HEIGHT: 0
+    FONT: custom\arial.ttf
+    FONT_SIZE: 11
+    FONT_COLOR: 140, 140, 140
+    ALIGN: left
+    ANCHOR: lt
+    ROTATION: 0
+    BACKGROUND_IMAGE: background.png
+
+STATS:
+  GPU:
+    INTERVAL: 1
+
+    # --- Giant Primary Hotspot Temp ---
+    # Notes: WeAct's sensors.Gpu reads hotspot on AMD cards when TEMP_TYPE is set to Hotspot / Junction
+    TEMPERATURE:
+      INTERVAL: 1
+      TEMP_TYPE: Hotspot
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        UNIT_ML: false
+        MIN_SIZE: 2
+        X: 40
+        Y: 48
+        WIDTH: 0
+        HEIGHT: 0
+        FONT: custom\arialbd.ttf
+        FONT_SIZE: 46
+        FONT_COLOR: 255, 59, 48
+        BACKGROUND_COLOR: 0, 0, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: center
+        ANCHOR: mm
+        ROTATION: 0
+
+    # --- GPU Core Load Bar & Readout ---
+    PERCENTAGE:
+      INTERVAL: 1
+      GRAPH:
+        SHOW: true
+        X: 6
+        Y: 77
+        WIDTH: 68
+        HEIGHT: 6
+        FILL_COLOR: 255, 85, 0
+        BACKGROUND_COLOR: 34, 17, 0
+        DIRECTION: l2r
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        UNIT_ML: false
+        MIN_SIZE: 0
+        X: 68
+        Y: 88
+        WIDTH: 0
+        HEIGHT: 0
+        FONT: custom\arialbd.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 255, 170, 0
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+        ROTATION: 0
+
+    # --- GPU VRAM Usage Percentage ---
+    MEMORY_PERCENT:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: true
+        UNIT_ML: false
+        MIN_SIZE: 0
+        X: 74
+        Y: 115
+        WIDTH: 0
+        HEIGHT: 0
+        FONT: custom\arialbd.ttf
+        FONT_SIZE: 12
+        FONT_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+        ROTATION: 0
+
+    # --- GPU Frequency (Clock Speed) ---
+    FREQUENCY:
+      INTERVAL: 1
+      TEXT:
+        SHOW: true
+        SHOW_UNIT: false
+        UNIT_ML: false
+        MIN_SIZE: 0
+        X: 74
+        Y: 136
+        WIDTH: 0
+        HEIGHT: 0
+        FONT: custom\arialbd.ttf
+        FONT_SIZE: 11
+        FONT_COLOR: 200, 200, 200
+        BACKGROUND_IMAGE: background.png
+        ALIGN: right
+        ANCHOR: rt
+        ROTATION: 0
